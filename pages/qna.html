@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A - Career Readiness Hub</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+        <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="student-dashboard.html">Dashboard</a></li>
+                <li><a href="tutor-profiles.html">Mentors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="sign-in.html" class="sign-btn">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ================= Q&A INTRO ================= -->
+    <section class="qna-header">
+        <h1>Student & Parent Q&A Forum</h1>
+        <p>Browse questions from students and parents about career planning, AP classes, college readiness, internships, and more.</p>
+        <p>If you have a question, submit it below — judges can try asking questions too!</p>
+    </section>
+
+    <!-- ================= PRELOADED QUESTIONS ================= -->
+    <section class="qna-container" id="qnaContainer">
+
+        <!-- Question 1 -->
+        <div class="qna-card">
+            <h3 class="question">Parent: Do AP classes actually help with college admissions?</h3>
+            <p class="answer">Yes. AP courses demonstrate academic rigor and readiness. Many colleges even offer credits for high AP exam scores.</p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="qna-card">
+            <h3 class="question">Student: What internships can high schoolers apply for with no experience?</h3>
+            <p class="answer">Many companies offer high‑school internships—especially in tech, healthcare, nonprofits, and government. Volunteer work also counts as experience.</p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="qna-card">
+            <h3 class="question">Student: How early should I start preparing for college applications?</h3>
+            <p class="answer">Most students begin in 10th grade by improving GPA, exploring interests, and building a resume. Application work usually starts in 11th grade.</p>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="qna-card">
+            <h3 class="question">Parent: What should my child include in their first resume?</h3>
+            <p class="answer">Students should include volunteer work, school activities, awards, skills, leadership roles, and AP/dual‑credit courses.</p>
+        </div>
+
+    </section>
+
+    <!-- ================= POST A QUESTION ================= -->
+    <section class="question-form-section">
+        <h2>Post Your Own Question</h2>
+        <p>Judges can test this feature by submitting a new question.</p>
+
+        <form id="questionForm">
+            <label for="newQuestion">Your Question:</label><br>
+            <textarea id="newQuestion" required placeholder="Type your question here..."></textarea><br>
+            <button type="submit">Submit Question</button>
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="footer-left">
+            <img src="../images/logo.png" alt="Logo">
+            <p>Career Readiness Learning Hub © 2026</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About</a>
+            <a href="faq.html">FAQ</a>
+            <a href="sign-in.html">Sign In</a>
+        </div>
+
+        <div class="footer-contact">
+            <p>Email: support@careerhub.com</p>
+            <p>Phone: (555) 123‑4567</p>
+        </div>
+    </footer>
+
+    <!-- JS FOR INTERACTIVITY -->
+    <script src="../js/questions.js"></script>
+
+</body>
+</html>
