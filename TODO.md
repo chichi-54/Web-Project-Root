@@ -1,0 +1,6 @@
+- [ ] Add hero banner section to pages/contact.html with background image and light overlay
+- [ ] Update CSS for .contact-intro to use brand colors and improved layout
+- [ ] Update CSS for .contact-boxes and .contact-card to white rounded cards with blue shadows
+- [ ] Update CSS for .contact-form-section to full-width pale blue background, deep-blue button with orange hover
+- [ ] Ensure mobile-friendly adjustments for stacking cards
+- [ ] Test the redesigned contact page for visual appeal and functionality

@@ -27,18 +27,22 @@
         </nav>
     </header>
 
-
     <!-- ================= CONTACT INTRO ================= -->
     <section class="contact-intro">
         <h1>Contact Us</h1>
-        <p>
-            We are here to support your career and college readiness journey. Whether you have a question about 
-            course planning, internships, AP classes, career pathways, or website navigation, feel free to reach out. 
-            Our team is committed to helping students and parents access accurate guidance and resources.
-        </p>
-        <p>Please use the contact methods below or submit a message through the form. We typically respond within <strong>1–2 business days</strong>.</p>
-    </section>
 
+        <p>
+            We support students, parents, educators, and community partners in their college and career readiness journeys.
+            If you need guidance about academic planning, internships, resumes, AP courses, or general career exploration,
+            our team is here to assist you.
+        </p>
+
+        <p>
+            If you are unsure where to start, use the form below and tell us more about your background.
+            Understanding whether you are a high school student, parent, teacher, or counselor helps us match you
+            with the right resources and support. We typically respond within <strong>1–2 business days</strong>.
+        </p>
+    </section>
 
     <!-- ================= CONTACT INFO BOXES ================= -->
     <section class="contact-boxes">
@@ -64,12 +68,12 @@
 
     </section>
 
-
     <!-- ================= CONTACT FORM ================= -->
     <section class="contact-form-section">
         <h2>Send Us a Message</h2>
 
         <form id="contactForm">
+
             <!-- FIRST NAME -->
             <label for="firstName">First Name:</label><br>
             <input type="text" id="firstName" name="firstName" required><br>
@@ -82,6 +86,41 @@
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br>
 
+            <!-- USER TYPE -->
+            <label for="usertype">Who are you?</label><br>
+            <select id="usertype" name="usertype" required>
+                <option value="" disabled selected>Select one...</option>
+                <option value="highschool">High School Student</option>
+                <option value="college">College Student</option>
+                <option value="parent">Parent / Guardian</option>
+                <option value="educator">Teacher / Counselor</option>
+                <option value="other">Not Currently Enrolled</option>
+            </select><br>
+
+            <!-- GRADE LEVEL -->
+            <label for="grade">Grade Level (if applicable):</label><br>
+            <select id="grade" name="grade">
+                <option value="" disabled selected>Select grade...</option>
+                <option value="9">9th Grade</option>
+                <option value="10">10th Grade</option>
+                <option value="11">11th Grade</option>
+                <option value="12">12th Grade</option>
+                <option value="grad">Graduated</option>
+            </select><br>
+
+            <!-- REASON FOR CONTACT -->
+            <label for="reason">Reason for contacting:</label><br>
+            <select id="reason" name="reason" required>
+                <option value="" disabled selected>Select one...</option>
+                <option value="resume">Resume / Job Application Help</option>
+                <option value="college">College Readiness Questions</option>
+                <option value="internships">Internships / Volunteer Opportunities</option>
+                <option value="classes">AP / Course Planning Support</option>
+                <option value="tech">Technical Issue / Dashboard Help</option>
+                <option value="resources">Request More Resources</option>
+                <option value="feedback">Feedback / Suggestions</option>
+            </select><br>
+
             <!-- MESSAGE -->
             <label for="message">Message:</label><br>
             <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br>
@@ -92,9 +131,9 @@
             <p class="response-note">
                 Thank you! You can expect to hear from us within <strong>1–2 business days</strong>.
             </p>
+
         </form>
     </section>
-
 
     <!-- ================= FOOTER ================= -->
     <footer>

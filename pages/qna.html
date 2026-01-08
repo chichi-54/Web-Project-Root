@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Q&A - Career Readiness Hub</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/questions.css">
 </head>
 
 <body>
@@ -27,50 +27,115 @@
         </nav>
     </header>
 
-    <!-- ================= Q&A INTRO ================= -->
+    <!-- ================= PAGE HEADER ================= -->
     <section class="qna-header">
         <h1>Student & Parent Q&A Forum</h1>
-        <p>Browse questions from students and parents about career planning, AP classes, college readiness, internships, and more.</p>
-        <p>If you have a question, submit it below — judges can try asking questions too!</p>
+        <p>Browse detailed questions about college readiness, career planning, internships, and more.</p>
     </section>
 
-    <!-- ================= PRELOADED QUESTIONS ================= -->
+    <div class="filter-bar">
+    <button data-filter="all">All</button>
+    <button data-filter="student">Student</button>
+    <button data-filter="resume">Resume</button>
+    <button data-filter="college">College</button>
+    <button data-filter="interviews">Interviews</button>
+    <button data-filter="internships">Internships</button>
+    <button data-filter="networking">Networking</button>
+    <button data-filter="social-media">Social Media</button>
+</div>
+
+
+    <!-- ================= QUESTION CARDS ================= -->
     <section class="qna-container" id="qnaContainer">
 
-        <!-- Question 1 -->
+        <!-- CATEGORY: Career Direction -->
         <div class="qna-card">
-            <h3 class="question">Parent: Do AP classes actually help with college admissions?</h3>
-            <p class="answer">Yes. AP courses demonstrate academic rigor and readiness. Many colleges even offer credits for high AP exam scores.</p>
+            <span class="category cat-blue">Career Direction</span>
+            <h3 class="question">I'm a junior and I have no idea what I want to do after graduation. Is that bad?</h3>
+            <p class="answer">
+                Not at all — most juniors feel exactly the same! Start by taking career interest surveys such as Myers‑Briggs or
+                Holland Code. Pay attention to activities and classes that make you lose track of time. Try volunteering,
+                job shadowing, or talking with teachers about careers that match your strengths. You don’t need to have
+                everything figured out — just start exploring.
+            </p>
         </div>
 
-        <!-- Question 2 -->
+        <!-- CATEGORY: Resumes -->
         <div class="qna-card">
-            <h3 class="question">Student: What internships can high schoolers apply for with no experience?</h3>
-            <p class="answer">Many companies offer high‑school internships—especially in tech, healthcare, nonprofits, and government. Volunteer work also counts as experience.</p>
+            <span class="category cat-green">Resumes</span>
+            <h3 class="question">My resume is empty because I've never had a job. What do I put?</h3>
+            <p class="answer">
+                You have more experience than you think! Include volunteer work, school clubs, tutoring, babysitting,
+                skills, awards, and leadership roles. Employers look for responsibility, communication, and willingness to
+                learn — not just work history.
+            </p>
         </div>
 
-        <!-- Question 3 -->
+        <!-- CATEGORY: College Options -->
         <div class="qna-card">
-            <h3 class="question">Student: How early should I start preparing for college applications?</h3>
-            <p class="answer">Most students begin in 10th grade by improving GPA, exploring interests, and building a resume. Application work usually starts in 11th grade.</p>
+            <span class="category cat-yellow">College Options</span>
+            <h3 class="question">Do I need to go to college to get a good career?</h3>
+            <p class="answer">
+                Not always. Trades (electrician, welder, HVAC) pay very well and don’t require a 4‑year degree. Tech
+                bootcamps, apprenticeships, and healthcare certificate programs are solid options, too. College helps for
+                careers like teaching or engineering, but you should choose the path that fits your goals and learning
+                style.
+            </p>
         </div>
 
-        <!-- Question 4 -->
+        <!-- CATEGORY: Interview Tips -->
         <div class="qna-card">
-            <h3 class="question">Parent: What should my child include in their first resume?</h3>
-            <p class="answer">Students should include volunteer work, school activities, awards, skills, leadership roles, and AP/dual‑credit courses.</p>
+            <span class="category cat-orange">Interview Skills</span>
+            <h3 class="question">I bombed my first interview. How do I not freeze next time?</h3>
+            <p class="answer">
+                Practice is key! Rehearse common questions aloud with a friend. Prepare examples of teamwork and
+                problem‑solving. Research the company beforehand and bring questions to ask them. Interviewers expect
+                nervousness — it gets easier each time!
+            </p>
+        </div>
+
+        <!-- CATEGORY: Internships -->
+        <div class="qna-card">
+            <span class="category cat-purple">Internships</span>
+            <h3 class="question">What’s the difference between an internship and a job?</h3>
+            <p class="answer">
+                Internships are temporary learning experiences, while jobs are long‑term employment. Internships often
+                lead to better job opportunities because you gain skills, references, and professional connections.
+            </p>
+        </div>
+
+        <!-- CATEGORY: Networking -->
+        <div class="qna-card">
+            <span class="category cat-red">Networking</span>
+            <h3 class="question">How do I network if I don’t know anyone in my field?</h3>
+            <p class="answer">
+                Start with teachers, counselors, and family friends. Create a LinkedIn profile and connect with alumni
+                from your school. Attend career fairs and send short “informational interview” emails. Most professionals
+                are happy to help students.
+            </p>
+        </div>
+
+        <!-- CATEGORY: Social Media -->
+        <div class="qna-card">
+            <span class="category cat-gray">Digital Presence</span>
+            <h3 class="question">Should I include my social media on my resume? Do employers check?</h3>
+            <p class="answer">
+                Only include LinkedIn. Employers do check — over 70% review candidates’ social media. Make your accounts
+                private, remove inappropriate posts, and clean up usernames. Your digital footprint matters!
+            </p>
         </div>
 
     </section>
 
-    <!-- ================= POST A QUESTION ================= -->
+    <!-- ================= SUBMIT A NEW QUESTION ================= -->
     <section class="question-form-section">
-        <h2>Post Your Own Question</h2>
-        <p>Judges can test this feature by submitting a new question.</p>
+        <h2>Post a Question</h2>
+        <p>Have a question? Submit it here and it will appear below.</p>
 
         <form id="questionForm">
-            <label for="newQuestion">Your Question:</label><br>
-            <textarea id="newQuestion" required placeholder="Type your question here..."></textarea><br>
+            <label for="newQuestion">Your Question:</label>
+            <textarea id="newQuestion" required placeholder="Type your question..."></textarea>
+
             <button type="submit">Submit Question</button>
         </form>
     </section>
@@ -95,8 +160,7 @@
         </div>
     </footer>
 
-    <!-- JS FOR INTERACTIVITY -->
-    <script src="../js/questions.js"></script>
+    <script src="../js/qna.js"></script>
 
 </body>
 </html>

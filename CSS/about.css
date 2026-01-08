@@ -1,0 +1,207 @@
+/* =========================================================
+   ABOUT PAGE — FULL STYLESHEET
+   Gradient theme | Smooth hover | Responsive layout
+   ========================================================= */
+
+/* ----- Global Styles ----- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
+    color: #333;
+}
+
+/* =========================================================
+   HEADER + NAVIGATION
+   ========================================================= */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 65px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #007bff;
+}
+
+.sign-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff !important;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.sign-btn:hover {
+    background-color: #005fcc;
+}
+
+/* =========================================================
+   HERO IMAGE SECTION
+   ========================================================= */
+.hero-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 40px;
+}
+
+/* =========================================================
+   PAGE TITLE AND INTRO
+   ========================================================= */
+.about-page {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-title {
+    font-size: 42px;
+    color: #ff7b00;
+    margin-bottom: 10px;
+}
+
+.about-intro {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   CARD SECTIONS (Content Blocks)
+   ========================================================= */
+.card {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    margin: 40px auto;
+    padding: 25px 35px;
+    width: 85%;
+    max-width: 1000px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animation */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+/* Card Titles */
+.card h2 {
+    color: #ff7b00;
+    margin-top: 0;
+    font-size: 28px;
+}
+
+/* Text inside cards */
+.card p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Image + Text side-by-side layout */
+.image-card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.image-card img {
+    width: 40%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   RESPONSIVENESS
+   ========================================================= */
+@media (max-width: 768px) {
+    .image-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-card img {
+        width: 90%;
+    }
+
+    .about-title {
+        font-size: 34px;
+    }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background-color: #f8f9fa;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    color: #555;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #0056b3;
+}
+
+.footer-contact p {
+    color: #555;
+    font-size: 0.9rem;
+}
