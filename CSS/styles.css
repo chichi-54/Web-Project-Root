@@ -229,7 +229,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     transition: 0.2s;
-    border: 2px solid black;  /
+    border: 2px solid black;  
 }
 
 .cta-section .cta-btn:hover {
@@ -238,9 +238,11 @@ body {
     color: #fff; 
     opacity: 1;  
 
+}
 
-
-/* ================= FOOTER ================= */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 footer {
     background-color: #f8f9fa;
     padding: 40px;
@@ -260,7 +262,8 @@ footer img {
     color: #555;
 }
 
-.footer-links, .footer-contact {
+.footer-links,
+.footer-contact {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -280,6 +283,7 @@ footer img {
     color: #555;
     font-size: 0.9rem;
 }
+
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
@@ -317,6 +321,7 @@ footer img {
         text-align: center;
     }
 }
+
 
 
 
@@ -541,4 +546,3 @@ footer img {
 .faq-item.active .arrow {
     transform: rotate(45deg);
 }
-
