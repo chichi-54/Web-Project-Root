@@ -229,7 +229,7 @@ body {
     border-radius: 6px;
     text-decoration: none;
     transition: 0.2s;
-    border: 2px solid black;  /
+    border: 2px solid black;  
 }
 
 .cta-section .cta-btn:hover {
@@ -237,7 +237,7 @@ body {
     border-color: #ffbb00;
     color: #fff; 
     opacity: 1;  
-
+}
 
 
 /* ================= FOOTER ================= */
