@@ -33,6 +33,7 @@ body {
 .navbar a {
     text-decoration: none;
     color: #333;
+    font-weight: 500;
     transition: .2s;
 }
 
@@ -101,16 +102,19 @@ body {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 18px;
-    background: #0077ff;
-    color: #fff;
+    background: #fff;
+    color: #ff7b00;
+    opacity: 0.8;
     border-radius: 6px;
     text-decoration: none;
     transition: .2s;
+    border: 2px solid black;
 }
 
+
 .btn:hover {
-    background: #005fcc;
-}
+    background: #ff7b00;
+    color: #fff;}
 
 /* ===== VIDEO SECTION ===== */
 

@@ -20,25 +20,27 @@
 
 /* ================= BODY ================= */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-
-    background: var(--bg-main);
-    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
+    color: #333;
 }
-
 .main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 40px; /* MATCH HEADER SPACING */
+    padding: 15px 40px;
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-
-
+/* -----------------------------
+* -----------------------------
+    NAVBAR / HEADER
+------------------------------*/
+/* ================= HEADER / NAV ================= */
 .logo {
     height: 65px;
 }
@@ -48,6 +50,8 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar a {
@@ -61,6 +65,7 @@ body {
 .navbar a.active {
     color: #007bff;
 }
+
 .sign-btn {
     padding: 6px 14px;
     border-radius: 6px;
@@ -71,8 +76,9 @@ body {
 }
 
 .sign-btn:hover {
-    background-color: #0056b3;
+    background-color: #005fcc;
 }
+
 
 
 
@@ -116,6 +122,7 @@ body {
 .tutor-card:hover {
     transform: translateY(-4px);
 }
+
 
 .tutor-image {
     width: 100%;

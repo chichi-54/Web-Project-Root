@@ -1,0 +1,261 @@
+/* -----------------------------
+    ROOT VARIABLES + COLORS
+------------------------------*/
+:root {
+    --orange: #ffb77c;
+    --orange-soft: #ffe2c9;
+
+    --blue: #9acaff;
+    --blue-dark: #5a96d6;
+    --blue-soft: #d9ecff;
+
+    --card-bg: rgba(255, 255, 255, 0.72);
+    --card-border: rgba(255, 255, 255, 0.3);
+
+    --radius: 18px;
+    --shadow-1: 0 6px 18px rgba(0,0,0,0.08);
+    --shadow-2: 0 12px 30px rgba(0,0,0,0.12);
+
+    --transition: 0.3s ease;
+}
+
+/* -----------------------------
+    GLOBAL BODY
+------------------------------*/
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #ffe8d6, #d9ecff);
+    color: #333;
+}
+
+/* -----------------------------
+    NAVBAR / HEADER
+------------------------------*/
+/* ================= HEADER / NAV ================= */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 65px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #007bff;
+}
+
+/* PROFILE IMAGE */
+.pfp {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: var(--shadow-1);
+}
+
+/* -----------------------------
+    DASHBOARD GRID
+------------------------------*/
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 30px 50px;
+}
+
+@media (max-width: 1000px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Adjust grid layout to improve spacing */
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-1);
+    border: 1px solid var(--card-border);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Improve the grid layout for smaller screens */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* -----------------------------
+    CARD BASE STYLE
+------------------------------*/
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow-1);
+    border: 1px solid var(--card-border);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-2);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ================= QUICK ACTION BUTTONS ================= */
+.tool-btn {
+    background-color: var(--orange);  /* Same background color as Join buttons */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;  /* Adds some space between the icon and text */
+    text-align: center;
+    width: 100%;  /* Make button fill container */
+    margin-bottom: 12px;  /* Adds space between buttons */
+}
+
+/* Hover effect for Quick Action Buttons */
+.tool-btn:hover {
+    background-color: var(--blue-dark);
+    transform: scale(1.05);  /* Slightly increase size for hover */
+}
+
+/* Icon in tool button */
+.tool-btn i {
+    font-size: 20px;  /* Adjust size of the icon */
+}
+
+/* Tool button text */
+.tool-btn span {
+    font-size: 16px;
+    text-transform: capitalize;  /* Capitalize first letters of each word */
+}
+
+/* -----------------------------
+    ACTIVITY SESSIONS SECTION
+------------------------------*/
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-1);
+}
+
+.activity-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.activity-info p {
+    margin: 3px 0 0;
+    color: #555;
+}
+
+/* Activity join button */
+.join-btn {
+    background: var(--orange);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.join-btn:hover {
+    background: var(--blue-dark);
+    transform: scale(1.05);
+}
+
+/* -----------------------------
+    TIMELINE STYLE
+------------------------------*/
+.timeline {
+    border-left: 4px solid var(--blue-dark);
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.timeline-step {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-step::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: -32px;
+    top: 3px;
+    background: var(--blue-dark);
+    border-radius: 50%;
+}
+
+.timeline-step.completed::before {
+    background: var(--orange);
+}
+
+.timeline-step.current::before {
+    background: var(--blue);
+    box-shadow: 0px 0px 10px var(--blue);
+}

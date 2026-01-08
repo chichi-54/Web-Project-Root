@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Learning Hub Dashboard</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="main-header">
+        <img src="../images/logo.png" class="logo" alt="Career Hub Logo" />
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tutor-profiles.html">Mentors</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="sign-btn" href="sign-in.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- ================= PAGE WRAPPER ================= -->
+<div class="dashboard-wrapper">
+    <div class="dashboard-grid">
+        
+        <!-- ================= QUICK STATS ================= -->
+        <section class="card stats-card">
+            <h2>Your Progress</h2>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Internships Applied</h3>
+                    <p>4</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Scholarships Saved</h3>
+                    <p>7</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Mentor Sessions</h3>
+                    <p>2 Upcoming</p>
+                </div>
+            </div>
+        </section>
+        
+<!-- ================= EMOTION SLIDER ================= -->
+<section class="card emotion-card">
+    <h2>How Are You Feeling Today?</h2>
+    <div class="emoji-slider">
+        <span class="emoji" data-value="1">😔</span>
+        <span class="emoji" data-value="2">😐</span>
+        <span class="emoji" data-value="3">😊</span>
+        <span class="emoji" data-value="4">😄</span>
+        <span class="emoji" data-value="5">🌟</span>
+        <input type="range" min="1" max="5" value="3" class="slider" id="moodSlider">
+    </div>
+    <p class="emotion-label">Feeling good! Keep up the momentum!</p>
+
+    <!-- Mood History Section -->
+    <div class="mood-history">
+        <h3>Recent Moods</h3>
+        <ul id="historyList">
+            <li class="history-item">😊 - Feeling neutral</li>
+            <li class="history-item">😄 - Excited for the new project!</li>
+        </ul>
+    </div>
+</section>
+
+        
+        <!-- ================= ACTIVITY SESSIONS ================= -->
+        <section class="card activity-card">
+            <h2>Live Sessions & Workshops</h2>
+            <div class="activity-list">
+                <div class="activity-item">
+                   <!-- <img src="#" class="activity-img" alt="Maria Lopez">-->
+                    <div class="activity-info">
+                        <h3>Essay Writing Workshop</h3>
+                        <p><strong>Host:</strong> Maria Lopez</p>
+                        <p><i class="fas fa-user-friends"></i> 33 students joined</p>
+                        <p><i class="far fa-clock"></i> Starting in 15 mins</p>
+                    </div>
+                    <button class="join-btn"><i class="fas fa-video"></i> Join Now</button>
+                </div>
+                <div class="activity-item">
+                    <!--<img src="images/mishabo.jpg" class="activity-img" alt="Guest Speaker">-->
+                    <div class="activity-info">
+                        <h3>Guest Speaker: Tech Careers</h3>
+                        <p><strong>Host:</strong> Mishabo Maduga</p>
+                        <p><i class="fas fa-user-friends"></i> 28 students joined</p>
+                        <p><i class="far fa-clock"></i> Tomorrow, 2:00 PM</p>
+                    </div>
+                    <button class="join-btn"><i class="fas fa-calendar-plus"></i> RSVP</button>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info no-image">
+                        <h3>Start Your Study Session</h3>
+                        <p>Create a virtual study room and invite classmates</p>
+                        <p><i class="fas fa-lightbulb"></i> Perfect for group projects</p>
+                    </div>
+                    <button class="join-btn primary"><i class="fas fa-plus-circle"></i> Create Session</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= STUDENT TOOLS SECTION ================= -->
+        <section class="card tools-card">
+            <h2>Quick Actions</h2>
+            <div class="tools-grid">
+                <button class="tool-btn">
+                    <i class="fas fa-money-check-alt"></i>
+                    <span>Apply for Scholarships</span>
+                </button>
+                <button class="tool-btn">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Find Internships</span>
+                </button>
+                <button class="tool-btn">
+                    <i class="fas fa-comments"></i>
+                    <span>Join Q&A</span>
+                </button>
+                <button class="tool-btn">
+                    <i class="fas fa-file-upload"></i>
+                    <span>Upload Resume</span>
+                </button>
+            </div>
+        </section>
+        
+        <!-- ================= ROADMAP / TIMELINE ================= -->
+        <section class="card timeline-card">
+            <h2>Your Career Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-step completed">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h4>Resume Review</h4>
+                        <p>Completed with mentor feedback</p>
+                    </div>
+                </div>
+                <div class="timeline-step completed">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h4>Career Assessment</h4>
+                        <p>Skills and interest analysis done</p>
+                    </div>
+                </div>
+                <div class="timeline-step current">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h4>Internship Applications</h4>
+                        <p>Apply to 5+ positions this month</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h4>Interview Prep</h4>
+                        <p>Mock interviews scheduled</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-marker"></div>
+                    <div class="step-content">
+                        <h4>Network Building</h4>
+                        <p>Connect with 10+ professionals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= TASK LIST ================= -->
+        <section class="card tasks-card">
+            <h2>Upcoming Tasks</h2>
+            <ul class="task-list">
+                <li>
+                    <label class="task-item">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        <span class="task-text completed">Update LinkedIn profile</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="task-text">Apply to Google internship</span>
+                        <span class="task-deadline">Due May 10</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="task-text">Prepare for mentor session</span>
+                        <span class="task-deadline">Tomorrow, 3 PM</span>
+                    </label>
+                </li>
+                <li>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <span class="task-text">Complete scholarship essay</span>
+                        <span class="task-deadline">Due May 15</span>
+                    </label>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</
