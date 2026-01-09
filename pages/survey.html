@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Survey | Career Readiness Hub</title>
+    <link rel="stylesheet" href="../CSS/survey.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"
+</head>
+
+<body>
+
+<header class="main-header">
+    <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/resources.html" class="active">Resources</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+            <li><a href="../pages/tutor-profiles.html">Mentors</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/faq.html">FAQ</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/sign-in.html" class="sign-btn">Sign In</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="career-survey">
+    <h2>Career Interest Survey</h2>
+    <p>Answer a few questions to see which career pathways might interest you the most!</p>
+
+    <form id="careerSurvey">
+        <!-- Step 1 -->
+        <div class="survey-step active">
+            <p>1. Which subjects do you enjoy the most? (Select all that apply)</p>
+            <label><input type="checkbox" name="subjects" value="Math"> Math</label>
+            <label><input type="checkbox" name="subjects" value="Science"> Science</label>
+            <label><input type="checkbox" name="subjects" value="Art"> Art</label>
+            <label><input type="checkbox" name="subjects" value="English"> English</label>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="survey-step">
+            <p>2. Do you prefer working with people or technology?</p>
+            <label><input type="radio" name="preference" value="People"> People</label>
+            <label><input type="radio" name="preference" value="Technology"> Technology</label>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="survey-step">
+            <p>3. Which type of work environment appeals to you most?</p>
+            <label><input type="radio" name="environment" value="Office"> Office</label>
+            <label><input type="radio" name="environment" value="Outdoor"> Outdoor</label>
+            <label><input type="radio" name="environment" value="Lab"> Lab/Research</label>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="survey-step">
+            <p>4. How do you like to solve problems?</p>
+            <label><input type="radio" name="problemSolving" value="Analytical"> Analyzing data and facts</label>
+            <label><input type="radio" name="problemSolving" value="Creative"> Using creativity and imagination</label>
+            <label><input type="radio" name="problemSolving" value="Social"> Collaborating with others</label>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="survey-step">
+            <p>5. Which activities energize you the most? (Select all that apply)</p>
+            <label><input type="checkbox" name="activities" value="Leading"> Leading and organizing</label>
+            <label><input type="checkbox" name="activities" value="Helping"> Helping others</label>
+            <label><input type="checkbox" name="activities" value="Building"> Designing or building things</label>
+            <label><input type="checkbox" name="activities" value="Exploring"> Researching and exploring ideas</label>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="survey-step">
+            <p>6. What matters most in your future career?</p>
+            <label><input type="radio" name="careerGoal" value="Impact"> Making an impact on people</label>
+            <label><input type="radio" name="careerGoal" value="Innovation"> Innovating or creating new things</label>
+            <label><input type="radio" name="careerGoal" value="Stability"> Job stability and security</label>
+        </div>
+
+        <div class="btn-container">
+            <button type="button" id="prevBtn" style="display:none;">Back</button>
+            <button type="button" id="nextBtn">Next</button>
+        </div>
+    </form>
+
+    <div id="surveyResult"></div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-left">
+        <img src="../images/logo.png" alt="Logo">
+        <p>Next Step © 2026</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="../pages/contact.html">Contact Us</a>
+        <a href="../pages/about.html">About</a>
+        <a href="../pages/faq.html">FAQ</a>
+        <a href="../pages/sign-in.html">Sign In</a>
+    </div>
+
+    <div class="footer-contact">
+        <p>Email: support@careerhub.com</p>
+        <p>Phone: (555) 123‑4567</p>
+    </div>
+</footer>
+<script src="../JS/survey.js"></script>
+</body>
+</html>
+
