@@ -22,7 +22,6 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a class="sign-btn" href="sign-in.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -61,7 +60,16 @@
         <span class="emoji" data-value="3">😊</span>
         <span class="emoji" data-value="4">😄</span>
         <span class="emoji" data-value="5">🌟</span>
+
         <input type="range" min="1" max="5" value="3" class="slider" id="moodSlider">
+    
+    </div>
+    <div class="tool-buttons">
+         <button class="tool-btn" onclick="window.location.href='stress.html'">
+                 <i class="fas fa-briefcase"></i>
+                <span>Stress Relief</span>
+                </button>
+
     </div>
     <p class="emotion-label">Feeling good! Keep up the momentum!</p>
 
@@ -115,17 +123,17 @@
         <section class="card tools-card">
             <h2>Quick Actions</h2>
             <div class="tools-grid">
-                <button class="tool-btn">
+                <button class="tool-btn" onclick="window.location.href='scholarships.html'">
                     <i class="fas fa-money-check-alt"></i>
                     <span>Apply for Scholarships</span>
                 </button>
-                <button class="tool-btn">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Find Internships</span>
+                <button class="tool-btn" onclick="window.location.href='internships.html'">
+                 <i class="fas fa-briefcase"></i>
+                <span>Find Internships</span>
                 </button>
-                <button class="tool-btn">
+
+                <button class="tool-btn" onclick="window.location.href='qna.html'">
                     <i class="fas fa-comments"></i>
-                    <a href="qna.html" class="cta-btn">
                     <span>Join Q&A</span>
                     </a>
                 </button>
@@ -219,5 +227,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="../JS/dashboard.js"></script>
 </body>
 </

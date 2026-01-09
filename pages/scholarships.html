@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Finder | Career Readiness Hub</title>
+    <link rel="stylesheet" href="../CSS/scholarships.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="main-header">
+    <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/scholarships.html" class="active">Scholarship Finder</a></li>
+            <li><a href="../pages/resources.html">Resources</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="scholarship-finder">
+    <h1>Discover Scholarships and Grants</h1>
+    
+    <div class="filters">
+        <select id="levelFilter" onchange="filterScholarships()">
+            <option value="All">All Levels</option>
+            <option value="High School">High School</option>
+            <option value="College">College</option>
+        </select>
+
+        <select id="typeFilter" onchange="filterScholarships()">
+            <option value="All">All Types</option>
+            <option value="Merit-Based">Merit-Based</option>
+            <option value="Need-Based">Need-Based</option>
+            <option value="Creative/Essay">Creative/Essay</option>
+        </select>
+
+        <select id="deadlineFilter" onchange="filterScholarships()">
+            <option value="All">All Deadlines</option>
+            <option value="Spring 2026">Spring 2026</option>
+            <option value="Summer 2026">Summer 2026</option>
+            <option value="Fall 2026">Fall 2026</option>
+        </select>
+    </div>
+
+    <div id="results" class="results-grid">
+        <!-- Scholarship cards will appear here -->
+    </div>
+</section>
+
+<footer>
+    <div class="footer-left">
+        <img src="../images/logo.png" alt="Logo">
+        <p>Next Step © 2026</p>
+    </div>
+</footer>
+
+<script src="../JS/scholarships.js"></script>
+</body>
+</html>

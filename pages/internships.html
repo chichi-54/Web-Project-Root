@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Finder | Career Readiness Hub</title>
+    <link rel="stylesheet" href="../CSS/internships.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <!-- HEADER -->
+   <header class="main-header">
+    <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/internships.html" class="active">Internship Finder</a></li>
+            <li><a href="../pages/resources.html">Resources</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="internship-finder">
+    <h1>Find Your Ideal Internship</h1>
+    
+    <div class="filters">
+        <select id="fieldFilter" onchange="filterInternships()">
+            <option value="All">All Fields</option>
+            <option value="Technology">Technology</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Environmental">Environmental</option>
+        </select>
+
+        <select id="typeFilter" onchange="filterInternships()">
+            <option value="All">All Types</option>
+            <option value="High School">High School Internship</option>
+            <option value="College">College Internship</option>
+            <option value="Summer">Summer Program</option>
+        </select>
+
+        <select id="modeFilter" onchange="filterInternships()">
+            <option value="All">All Modes</option>
+            <option value="Remote">Remote</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Onsite">Onsite</option>
+        </select>
+    </div>
+
+    <div id="results" class="results-grid">
+        <!-- Internship cards appear here dynamically -->
+    </div>
+</section>
+
+<footer>
+    <div class="footer-left">
+        <img src="../images/logo.png" alt="Logo">
+        <p>Next Step © 2026</p>
+    </div>
+</footer>
+
+<script src="../JS/internships.js"></script>
+</body>
+</html>

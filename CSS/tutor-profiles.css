@@ -189,7 +189,7 @@ body {
 
 /* Replace text */
 .mentor-cta:hover::after {
-    content: "🚧 In Construction";
+    content: "Sign Up";
     color: #ffffff;
     position: absolute;
     left: 50%;

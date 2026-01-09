@@ -1,0 +1,118 @@
+/* Root + Colors */
+:root {
+    --orange: #ffb77c;
+    --blue-dark: #5a96d6;
+    --card-bg: rgba(255,255,255,0.8);
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --text-color: #333;
+    --heading-color: #f97316;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe8d6, #d9ecff);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+main.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+/* -----------------------------
+    NAVBAR / HEADER
+------------------------------*/
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 65px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #007bff;
+}
+/* Sections */
+section {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+section h1,
+section h2 {
+    color: var(--heading-color);
+    margin-top: 0;
+}
+
+/* Lists and tables */
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: var(--blue-dark);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main.content {
+        padding: 0 15px;
+    }
+    table, th, td {
+        font-size: 0.9rem;
+    }
+}

@@ -32,7 +32,6 @@ body {
 /* -----------------------------
     NAVBAR / HEADER
 ------------------------------*/
-/* ================= HEADER / NAV ================= */
 .main-header {
     display: flex;
     align-items: center;
@@ -43,6 +42,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -54,6 +54,7 @@ body {
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -82,19 +83,37 @@ body {
     DASHBOARD GRID
 ------------------------------*/
 .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    padding: 30px 50px;
-}
+     display: grid;
+      grid-template-columns: repeat(3, 1fr);
+       gap: 28px;
+        padding: 30px 50px;
+     }
 
 @media (max-width: 1000px) {
     .dashboard-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr; /* 2-column for tablets */
+        gap: 20px;
     }
 }
 
-/* Adjust grid layout to improve spacing */
+@media (max-width: 600px) {
+   .emotion-card {
+        max-width: 100%;    /* Fill grid cell */
+        width: 100%;        /* Don't exceed cell */
+        margin: 0;          /* Remove centering to align with grid */
+        padding: 1.5rem;    /* Optional: keeps inner spacing */
+        box-sizing: border-box; /* Include padding in width */
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr; /* 1-column on phones */
+        padding: 20px;
+        gap: 15px;
+    }
+}
+
+/* -----------------------------
+    CARD BASE STYLE
+------------------------------*/
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
@@ -108,39 +127,6 @@ body {
     align-items: flex-start;
 }
 
-.card h2 {
-    margin-top: 0;
-    font-size: 22px;
-    font-weight: 700;
-}
-
-/* Improve the grid layout for smaller screens */
-@media (max-width: 768px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .dashboard-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* -----------------------------
-    CARD BASE STYLE
-------------------------------*/
-.card {
-    background: var(--card-bg);
-    backdrop-filter: blur(12px);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: var(--shadow-1);
-    border: 1px solid var(--card-border);
-    transition: var(--transition);
-}
-
 .card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-2);
@@ -152,9 +138,11 @@ body {
     font-weight: 700;
 }
 
-/* ================= QUICK ACTION BUTTONS ================= */
+/* -----------------------------
+    QUICK ACTION BUTTONS
+------------------------------*/
 .tool-btn {
-    background-color: var(--orange);  /* Same background color as Join buttons */
+    background-color: var(--orange);
     color: white;
     padding: 12px 20px;
     border-radius: 8px;
@@ -164,31 +152,90 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;  /* Adds some space between the icon and text */
+    gap: 10px;
     text-align: center;
-    width: 100%;  /* Make button fill container */
-    margin-bottom: 12px;  /* Adds space between buttons */
+    width: 100%;
+    margin-bottom: 12px;
 }
 
-/* Hover effect for Quick Action Buttons */
 .tool-btn:hover {
     background-color: var(--blue-dark);
-    transform: scale(1.05);  /* Slightly increase size for hover */
+    transform: scale(1.05);
 }
 
-/* Icon in tool button */
 .tool-btn i {
-    font-size: 20px;  /* Adjust size of the icon */
+    font-size: 20px;
 }
 
-/* Tool button text */
 .tool-btn span {
     font-size: 16px;
-    text-transform: capitalize;  /* Capitalize first letters of each word */
+    text-transform: capitalize;
 }
 
 /* -----------------------------
-    ACTIVITY SESSIONS SECTION
+    EMOTION / MOOD TRACKER
+------------------------------*/
+.emotion-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: var(--shadow-1);
+    padding: 2rem;
+    max-width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+
+.emotion-card h2 {
+    color: #f97316;
+    margin-bottom: 1rem;
+}
+
+.emoji-slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.emoji-slider .emoji {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emoji-slider .emoji:hover {
+    transform: scale(1.3);
+}
+
+.slider {
+    width: 80%;
+    margin-top: 0.5rem;
+}
+
+.tool-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.emotion-label {
+    margin-top: 0.75rem;
+    font-weight: 500;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* -----------------------------
+    ACTIVITY / SESSION CARDS
 ------------------------------*/
 .activity-item {
     display: flex;
@@ -210,7 +257,6 @@ body {
     color: #555;
 }
 
-/* Activity join button */
 .join-btn {
     background: var(--orange);
     color: white;

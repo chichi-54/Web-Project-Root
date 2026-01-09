@@ -1,0 +1,135 @@
+/* ===== PAGE STYLES ===== */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
+    color: #333;
+}
+
+/* ================= HEADER / NAV ================= */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    height: 65px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #007bff;
+}
+
+
+.video-library {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.video-library h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #f97316; /* orange title for consistency */
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.video-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background-color: #f8f9fa;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    color: #555;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #0056b3;
+}
+
+.footer-contact p {
+    color: #555;
+    font-size: 0.9rem;
+}
