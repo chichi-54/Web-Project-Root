@@ -3,146 +3,454 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Study Skills – Career Readiness Hub</title>
+    <title>Study Skills & Learning Methods – Next Step</title>
     <link rel="icon" href="../images/logo.png" type="image/png" />
     <link rel="stylesheet" href="../CSS/study-skills.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <!-- HEADER -->
-<header class="main-header">
-    <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
-    <div class="hamburger">&#9776;</div>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../pages/study-skills.html" class="active">Study Methods</a></li>
-            <li><a href="../pages/resources.html">Resources</a></li>
-            <li><a href="../pages/dashboard.html">Dashboard</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class="main-header">
+        <img src="../images/logo.png" alt="Next Step Logo" class="logo">
+        <div class="hamburger">&#9776;</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/resources.html">Resources</a></li>
+                <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                <li><a href="../pages/tutor-profiles.html">Mentors</a></li>
+                <li><a href="../pages/study-skills.html" class="active">Study Skills</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/sign-in.html" class="sign-btn">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- PAGE INTRO -->
-    <section class="intro-section">
-        <h1>📚 Effective Study Methods Guide</h1>
-        <p>Discover proven techniques to help you study smarter, boost memory, and improve academic results.</p>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Master Effective Study Techniques</h1>
+            <p class="subtitle">Research-backed learning strategies to improve retention, boost productivity, and achieve academic success</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="number">87%</span>
+                    <span class="label">Higher Retention</span>
+                </div>
+                <div class="stat">
+                    <span class="number">2.5x</span>
+                    <span class="label">More Efficient</span>
+                </div>
+                <div class="stat">
+                    <span class="number">94%</span>
+                    <span class="label">Report Improved Grades</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="../images/study.jpg" alt="Student studying effectively">
+        </div>
     </section>
 
     <!-- STUDY METHODS GRID -->
-    <section class="methods-grid">
-
-        <!-- CARD 1 -->
-        <div class="method-card">
-            <h2>1️⃣ The Feynman Technique</h2>
-            <p><strong>Purpose:</strong> Explain concepts in simple terms to deeply understand them.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <ul>
-                    <li>Explain the topic as if teaching a child.</li>
-                    <li>Identify gaps in understanding.</li>
-                    <li>Study again and simplify further.</li>
-                </ul>
-                <p><strong>Best For:</strong> Math, Science, and complex concepts.</p>
-            </div>
+    <section class="methods-section">
+        <div class="section-header">
+            <h2>Evidence-Based Learning Techniques</h2>
+            <p>Each method below is supported by cognitive science research</p>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="method-card">
-            <h2>2️⃣ Active Recall</h2>
-            <p><strong>Purpose:</strong> Strengthen memory by retrieving information without notes.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <ul>
-                    <li>Study → close notes → write everything remembered.</li>
-                    <li>Identify what you missed and repeat.</li>
-                </ul>
-                <p><strong>Tools:</strong> Flashcards, practice quizzes.</p>
+        <div class="methods-grid">
+            <!-- CARD 1 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>The Feynman Technique</h3>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+                <p class="card-description">Master complex concepts by teaching them in simple terms. This method reveals knowledge gaps and promotes deep understanding.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Complex subjects</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Conceptual understanding</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Implementation Steps:</h4>
+                    <ol>
+                        <li><strong>Choose a concept</strong> you want to understand</li>
+                        <li><strong>Explain it in simple language</strong> as if teaching a 12-year-old</li>
+                        <li><strong>Identify gaps</strong> in your explanation</li>
+                        <li><strong>Review the material</strong> and simplify further</li>
+                        <li><strong>Repeat until</strong> you can explain it clearly and concisely</li>
+                    </ol>
+                    
+                    <div class="pro-tip">
+                        <i class="fas fa-lightbulb"></i>
+                        <p><strong>Pro Tip:</strong> Record yourself explaining the concept. Listening back helps identify unclear points.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Active Recall</h3>
+                    <span class="difficulty">Beginner</span>
+                </div>
+                <p class="card-description">Retrieve information from memory without cues. This strengthens neural connections and dramatically improves retention.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Memorization</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Long-term memory</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Implementation Steps:</h4>
+                    <ol>
+                        <li><strong>Study material</strong> for 20-30 minutes</li>
+                        <li><strong>Close all notes</strong> and write down everything you remember</li>
+                        <li><strong>Compare</strong> with original material</li>
+                        <li><strong>Focus review</strong> on missed information</li>
+                        <li><strong>Repeat cycle</strong> 2-3 times per study session</li>
+                    </ol>
+                    
+                    <div class="tools">
+                        <h5>Recommended Tools:</h5>
+                        <ul>
+                            <li>Anki flashcards (spaced repetition)</li>
+                            <li>Practice tests and quizzes</li>
+                            <li>Self-questioning techniques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Spaced Repetition</h3>
+                    <span class="difficulty">Intermediate</span>
+                </div>
+                <p class="card-description">Systematically review material at increasing intervals to combat the forgetting curve and optimize long-term retention.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Language learning</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Retention over time</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Optimal Review Schedule:</h4>
+                    <div class="schedule-grid">
+                        <div class="schedule-item">
+                            <span class="day">Day 1</span>
+                            <span class="task">Initial Learning</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Day 2</span>
+                            <span class="task">First Review</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Day 7</span>
+                            <span class="task">Second Review</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Day 16</span>
+                            <span class="task">Third Review</span>
+                        </div>
+                        <div class="schedule-item">
+                            <span class="day">Day 35</span>
+                            <span class="task">Fourth Review</span>
+                        </div>
+                    </div>
+                    
+                    <div class="research-note">
+                        <i class="fas fa-book"></i>
+                        <p><strong>Research Insight:</strong> Studies show spaced repetition can improve retention by 200% compared to massed practice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3>Pomodoro Technique</h3>
+                    <span class="difficulty">Beginner</span>
+                </div>
+                <p class="card-description">Work in focused 25-minute intervals followed by short breaks to maintain concentration and prevent mental fatigue.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Focus maintenance</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Productivity</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Standard Pomodoro Cycle:</h4>
+                    <div class="pomodoro-cycle">
+                        <div class="phase">
+                            <span class="phase-title">Work Session</span>
+                            <span class="phase-duration">25 minutes</span>
+                            <p class="phase-desc">Focused, uninterrupted work</p>
+                        </div>
+                        <div class="phase">
+                            <span class="phase-title">Short Break</span>
+                            <span class="phase-duration">5 minutes</span>
+                            <p class="phase-desc">Stand up, stretch, hydrate</p>
+                        </div>
+                        <div class="phase">
+                            <span class="phase-title">Work Session</span>
+                            <span class="phase-duration">25 minutes</span>
+                            <p class="phase-desc">Continue focused work</p>
+                        </div>
+                        <div class="phase">
+                            <span class="phase-title">Long Break</span>
+                            <span class="phase-duration">15-30 minutes</span>
+                            <p class="phase-desc">After 4 cycles - refresh mentally</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tips">
+                        <h5>Optimization Tips:</h5>
+                        <ul>
+                            <li>Use a physical timer for better commitment</li>
+                            <li>Eliminate distractions during work sessions</li>
+                            <li>Track completed pomodoros for motivation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>Cornell Method</h3>
+                    <span class="difficulty">Beginner</span>
+                </div>
+                <p class="card-description">Systematic note-taking format that organizes information for efficient review and active engagement with material.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Lecture notes</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Information organization</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Note Structure:</h4>
+                    <div class="cornell-structure">
+                        <div class="structure-section">
+                            <div class="section-header">Cue Column (2.5")</div>
+                            <p>Key questions, main ideas, prompts</p>
+                        </div>
+                        <div class="structure-section">
+                            <div class="section-header">Note Column (6")</div>
+                            <p>Detailed notes from lecture or reading</p>
+                        </div>
+                        <div class="structure-section">
+                            <div class="section-header">Summary Area (2")</div>
+                            <p>Brief summary of entire page content</p>
+                        </div>
+                    </div>
+                    
+                    <div class="workflow">
+                        <h5>Workflow Process:</h5>
+                        <ol>
+                            <li>Take notes in right column during lecture</li>
+                            <li>Within 24 hours, add cues/questions in left column</li>
+                            <li>Write summary at bottom of page</li>
+                            <li>Review by covering notes and using cues for recall</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="method-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Dual Coding</h3>
+                    <span class="difficulty">Advanced</span>
+                </div>
+                <p class="card-description">Combine verbal and visual information to create multiple memory pathways, enhancing comprehension and recall.</p>
+                
+                <div class="card-details">
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Best For: Complex systems</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-brain"></i>
+                        <span>Improves: Conceptual mapping</span>
+                    </div>
+                </div>
+                
+                <button class="toggle-btn">
+                    <span>View Step-by-Step Guide</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="content">
+                    <h4>Implementation Strategy:</h4>
+                    <div class="dual-coding-example">
+                        <div class="coding-method">
+                            <h5>Verbal Processing:</h5>
+                            <ul>
+                                <li>Write detailed explanations</li>
+                                <li>Create verbal associations</li>
+                                <li>Explain concepts aloud</li>
+                                <li>Use descriptive language</li>
+                            </ul>
+                        </div>
+                        <div class="coding-method">
+                            <h5>Visual Processing:</h5>
+                            <ul>
+                                <li>Create diagrams and charts</li>
+                                <li>Draw concept maps</li>
+                                <li>Use color coding</li>
+                                <li>Incorporate symbols and icons</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="benefits">
+                        <h5>Research Benefits:</h5>
+                        <ul>
+                            <li>45% better recall than single coding</li>
+                            <li>Improved problem-solving transfer</li>
+                            <li>Enhanced understanding of relationships</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- CARD 3 -->
-        <div class="method-card">
-            <h2>3️⃣ Spaced Repetition</h2>
-            <p><strong>Purpose:</strong> Boost long‑term retention through spaced review sessions.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <p>Review schedule:</p>
-                <ul>
-                    <li>Day 1 – Learn</li>
-                    <li>Day 2 – Review</li>
-                    <li>Day 4 – Review</li>
-                    <li>Day 7 – Review</li>
-                    <li>Day 14 – Review</li>
-                </ul>
+    <!-- STUDY PLAN CTA -->
+    <section class="study-plan-cta">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Study Habits?</h2>
+            <p>Create a personalized study plan based on your learning style and goals</p>
+            <div class="cta-buttons">
+                <a href="../pages/dashboard.html" class="primary-btn">
+                    <i class="fas fa-chart-line"></i>
+                    Create Study Plan
+                </a>
+                <a href="../pages/resources.html" class="secondary-btn">
+                    <i class="fas fa-book"></i>
+                    Explore More Resources
+                </a>
             </div>
         </div>
-
-        <!-- CARD 4 -->
-        <div class="method-card">
-            <h2>4️⃣ Pomodoro Technique</h2>
-            <p><strong>Purpose:</strong> Maintain focus using timed intervals.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <ul>
-                    <li>25 minutes focused work</li>
-                    <li>5 minute break</li>
-                    <li>Longer break after 4 cycles</li>
-                </ul>
-                <p><strong>Best For:</strong> Staying focused and avoiding burnout.</p>
-            </div>
-        </div>
-
-        <!-- CARD 5 -->
-        <div class="method-card">
-            <h2>5️⃣ Cornell Note‑Taking Method</h2>
-            <p><strong>Purpose:</strong> Organize notes for maximum retention.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <ul>
-                    <li>Right column → Notes</li>
-                    <li>Left column → Questions</li>
-                    <li>Bottom → Summary</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- CARD 6 -->
-        <div class="method-card">
-            <h2>6️⃣ Mind Mapping</h2>
-            <p><strong>Purpose:</strong> Visual learning through connected concepts.</p>
-            <button class="toggle-btn">View Details</button>
-            <div class="content">
-                <ul>
-                    <li>Central idea in the middle</li>
-                    <li>Branches for subtopics</li>
-                    <li>Use colors, arrows & images</li>
-                </ul>
-            </div>
-        </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-left">
-            <img src="../images/logo.png" alt="Logo">
-            <p>Career Readiness Learning Hub © 2026</p>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="../images/logo.png" alt="Next Step Logo">
+                <p>Next Step Learning Hub © 2026</p>
+                <p class="footer-tagline">Empowering students through evidence-based learning strategies</p>
+            </div>
+            <div class="footer-middle">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="../pages/contact.html">Contact Us</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/faq.html">FAQ</a>
+                    <a href="../pages/sign-in.html">Sign In</a>
+                    <a href="../pages/tutor-profiles.html">Find a Mentor</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h4>Contact Information</h4>
+                <div class="footer-contact">
+                    <p><i class="fas fa-envelope"></i> support@nextstep.com</p>
+                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    <p><i class="fas fa-clock"></i> Support Hours: Mon-Fri 9am-6pm EST</p>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="footer-links">
-            <a href="../pages/contact.html">Contact Us</a>
-            <a href="../pages/about.html">About</a>
-            <a href="../pages/faq.html">FAQ</a>
-            <a href="../pages/sign-in.html">Sign In</a>
-        </div>
-        <div class="footer-contact">
-            <p>Email: support@careerhub.com</p>
-            <p>Phone: (555) 123‑4567</p>
+        <div class="footer-bottom">
+            <p>Based on cognitive science research from Ebbinghaus, Dunlosky, Brown, Roediger, and others</p>
         </div>
     </footer>
 
-<script src="../js/study-skills.js" defer></script>
+    <script src="../js/study-skills.js" defer></script>
 </body>
 </html>

@@ -7,18 +7,30 @@ faqItems.forEach(item => {
     });
 
 });
-// ================== RESPONSIVE NAVIGATION ==================//
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".navbar ul");
 
-    if (hamburger && navMenu) {
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("show"); // toggles menu
-        });
-        // Optional: close menu when clicking a link
-        navMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => navMenu.classList.remove("show"));
-        });
-    }
-});
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navbar = document.querySelector('.navbar');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                navbar.classList.toggle('show');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) {
+                    navbar.classList.remove('show');
+                }
+            });
+            
+            // Close menu when clicking a link
+            const navLinks = document.querySelectorAll('.navbar a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navbar.classList.remove('show');
+                });
+            });
+        }
+    });
