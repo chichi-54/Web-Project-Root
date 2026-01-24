@@ -45,3 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 1000);
     });
 });
+// Hangburger menu functionality//
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar ul');
+hamburger.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+});
+// Hamburger menu functionality

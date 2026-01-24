@@ -1,22 +1,41 @@
-/* ===== PAGE STYLES ===== */
+/* essays.css - Video page with YOUR hamburger menu style */
 
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
-    color: #333;
+/* Root + Colors */
+:root {
+    --orange: #ffb77c;
+    --blue-dark: #5a96d6;
+    --card-bg: rgba(255,255,255,0.8);
+    --radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --text-color: #333;
+    --heading-color: #f97316;
 }
 
-/* Header */
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe8d6, #d9ecff);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
 .main-header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
-    background: #fff;
-    border-bottom: 1px solid #e4e4e4;
-    position: sticky;
-    top: 0;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
@@ -28,143 +47,295 @@ body {
     display: flex;
     gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar a {
-    text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: .2s;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: #0077ff;
+    background-color: rgba(0, 119, 255, 0.1);
 }
 
-.sign-btn {
-    background: #0077ff;
-    padding: 6px 14px;
-    border-radius: 6px;
-    color: #fff !important;
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
 }
 
-
+/* ================= MAIN CONTENT ================= */
 .essay-workshop {
-    max-width: 1000px;
-    margin: 2rem auto;
-    background:rgba(236, 250, 255, 0.858);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+/* Title and Video Container - SIDE BY SIDE on desktop */
 .title-video-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 40px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
+/* Title Section */
 .title-video-container h1 {
-    flex: 1 1 400px;
-    font-size: 1.8rem;
-    color:darkorange
+    color: var(--heading-color);
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
 }
 
+/* Video Section */
 .video-wrapper {
-    flex: 1 1 400px;
+    flex: 1;
+    min-width: 0;
 }
 
 .video-wrapper video {
     width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 12px;
+    max-width: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: block;
+}
+
+/* Essay Article */
+.essay-article {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
 
 .essay-article h2 {
-    margin-top: 1.5rem;
-    color: #4f46e5;
+    color: var(--heading-color);
+    margin-top: 1.8em;
+    margin-bottom: 0.8em;
+    font-size: 1.5rem;
 }
 
-.essay-article h3 {
-    margin-top: 1rem;
-    color: #3730a3;
+.essay-article p {
+    margin-bottom: 1.2em;
+    line-height: 1.7;
 }
 
 .essay-article ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1em 0;
+    padding-left: 1.5em;
 }
 
-hr {
-    margin: 2rem 0;
+.essay-article li {
+    margin-bottom: 0.8em;
+    line-height: 1.6;
+}
+
+.essay-article hr {
     border: none;
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #eee;
+    margin: 2em 0;
 }
 
+.essay-article h3 {
+    color: var(--heading-color);
+    margin-top: 2em;
+}
+
+/* ================= FOOTER ================= */
 footer {
-    text-align: center;
-    padding: 1rem;
-}
-
-footer img {
-    height: 40px;
-    margin-bottom: 0.5rem;
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-    .title-video-container {
-        flex-direction: column;
-    }
-
-    .title-video-container h1 {
-        text-align: center;
-    }
-}
-/* =========================================================
-   FOOTER
-   ========================================================= */
-footer {
-    background-color: #f8f9fa;
-    padding: 40px;
+    background: white;
+    padding: 30px;
+    margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
+    align-items: center;
     border-top: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-footer img {
-    height: 40px;
-    margin-bottom: 10px;
-}
-
-.footer-left p {
-    color: #555;
-}
-
-.footer-links,
-.footer-contact {
+.footer-left {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-left img {
+    height: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-links a {
     text-decoration: none;
-    color: #007bff;
-    transition: color 0.2s ease;
+    color: #333;
+    transition: color 0.2s;
 }
 
 .footer-links a:hover {
-    color: #0056b3;
+    color: #007bff;
 }
 
 .footer-contact p {
-    color: #555;
-    font-size: 0.9rem;
+    margin: 5px 0;
 }
 
+/* ================= HAMBURGER - HIDDEN ON DESKTOP ================= */
+.hamburger {
+    display: none;          /* Hidden on desktop by default */
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    margin-left: auto;      /* Push to right when shown */
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 900px) {
+    /* Adjust side-by-side layout for tablet */
+    .title-video-container {
+        gap: 25px;
+        padding: 25px;
+    }
+    
+    .title-video-container h1 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Switch to stacked layout on mobile */
+    .title-video-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .title-video-container h1 {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    .essay-article {
+        padding: 20px;
+    }
+    
+    .essay-article h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    /* YOUR HAMBURGER MENU STYLE (from resources page) */
+    .hamburger {
+        display: block;
+        margin-left: auto;   /* push to right */
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: none;       /* hide menu initially */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;           /* dropdown below header */
+        right: 0;            /* align to right */
+        background: rgba(255, 255, 255, 0.82); /* glass effect */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 0 0 12px 12px;
+        z-index: 99;
+    }
+
+    .navbar ul.show {
+        display: flex;       /* show menu when toggled */
+    }
+
+    .main-header {
+        flex-direction: row;  /* logo left, hamburger right */
+        align-items: center;
+        padding: 15px 20px;
+    }
+    
+    /* Content adjustments */
+    .essay-workshop {
+        margin: 15px auto;
+        padding: 0 15px;
+    }
+    
+    .title-video-container {
+        padding: 15px;
+    }
+    
+    .title-video-container h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Small screen optimizations */
+    .main-header {
+        padding: 8px 15px;
+    }
+    
+    .essay-workshop {
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+    
+    .title-video-container {
+        padding: 15px;
+    }
+    
+    .title-video-container h1 {
+        font-size: 1.3rem;
+    }
+    
+    .essay-article {
+        padding: 15px;
+    }
+    
+    /* Footer stacking on mobile */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 15px;
+        gap: 15px;
+    }
+    
+    .footer-left {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+}

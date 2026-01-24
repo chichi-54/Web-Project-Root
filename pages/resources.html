@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Career Readiness Hub</title>
     <link rel="stylesheet" href="../CSS/resources.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"
 </head>
 
@@ -13,6 +14,7 @@
 
 <header class="main-header">
     <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+    <div class="hamburger">&#9776;</div>
     <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
@@ -139,6 +141,24 @@
         <p>Phone: (555) 123‑4567</p>
     </div>
 </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show"); // toggles menu
+        });
+
+        // Optional: close menu when clicking a link
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => navMenu.classList.remove("show"));
+        });
+    }
+});
+</script>
+
 
 </body>
 </html>

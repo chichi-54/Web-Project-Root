@@ -111,3 +111,14 @@ function filterScholarships() {
 
 // Initialize page with all scholarships
 filterScholarships();
+
+document.getElementById("levelFilter").addEventListener("change", filterScholarships);
+document.getElementById("typeFilter").addEventListener("change", filterScholarships);
+document.getElementById("deadlineFilter").addEventListener("change", filterScholarships);
+// Hamburger menu functionality
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.navbar ul');
+hamburger.addEventListener('click', function() {
+    navMenu.classList.toggle('show');
+});
+// Hamburger menu functionality

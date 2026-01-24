@@ -24,23 +24,22 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
     color: #333;
-}
+/* ================= HEADER / NAV ================= */
 .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
+    position: sticky;               
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px; /* More padding for taller header */
+    background: rgba(255, 255, 255, 0.4); /* Glass effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
-/* -----------------------------
-* -----------------------------
-    NAVBAR / HEADER
-------------------------------*/
-/* ================= HEADER / NAV ================= */
+
 .logo {
     height: 65px;
 }
@@ -52,34 +51,70 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
+    margin-left: auto; /* Push nav to the right */
 }
 
 .navbar a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
     color: #007bff;
+    background-color: rgba(0, 119, 255, 0.1);
 }
 
-.sign-btn {
-    padding: 6px 14px;
-    border-radius: 6px;
-    background-color: #007bff;
-    color: #fff !important;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
+/* ================= HAMBURGER - HIDDEN ON DESKTOP ================= */
+.hamburger {
+    display: none;          /* Hidden on desktop by default */
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    margin-left: auto;      /* Push to right when shown */
+}
 }
 
-.sign-btn:hover {
-    background-color: #005fcc;
+/* Mobile view */
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;      /* show hamburger */
+        margin-left: auto;   /* push to right */
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: none;       /* hide menu initially */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;           /* dropdown below header */
+        right: 0;            /* align to right */
+        background: rgba(255, 255, 255, 0.82); /* glass effect */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 0 0 12px 12px;
+        z-index: 99;
+    }
+
+    .navbar ul.show {
+        display: flex;       /* show menu when toggled */
+    }
+
+    .main-header {
+        flex-direction: row;  /* logo left, hamburger right */
+        align-items: center;
+        padding: 15px 20px;
+    }
 }
-
-
 
 
 /* ================= PAGE HEADER ================= */

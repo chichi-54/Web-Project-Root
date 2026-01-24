@@ -29,4 +29,19 @@ slider.addEventListener("input", () => {
     const labels = ["Feeling down 😔", "Meh 😐", "Feeling good 😊", "Great 😄", "Fantastic 🌟"];
     label.textContent = labels[value - 1];
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show"); // toggles menu
+        });
+
+        // Optional: close menu when clicking a link
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => navMenu.classList.remove("show"));
+        });
+    }
+});
 

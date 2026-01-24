@@ -14,38 +14,49 @@ body {
 
 /* ================= HEADER / NAV ================= */
 .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between; /* logo left, menu right */
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     z-index: 100;
 }
 
-.logo {
-    height: 65px;
-}
-
+/* Desktop nav links pushed right */
 .navbar ul {
     list-style: none;
     display: flex;
     gap: 20px;
     align-items: center;
+    margin-left: auto; /* THIS pushes links to the right */
+    margin-right: 0;   /* Ensures no right margin */
+    padding: 0;
 }
 
+/* Ensure nav links are readable on glass */
 .navbar a {
-    text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: color 0.2s ease;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #007bff;
+    color: #0077ff;
+    background-color: rgba(0, 119, 255, 0.1);
+}
+
+.logo {
+    height: 60px;
 }
 
 .sign-btn {
@@ -60,7 +71,6 @@ body {
 .sign-btn:hover {
     background-color: #0056b3;
 }
-
 /* ================= HERO ================= */
 .hero {
     display: flex;
@@ -285,44 +295,57 @@ footer img {
 
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 900px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 30px;
-    }
-
-    .cta-section {
-        margin: 40px 20px;
-    }
-
-    .feature-grid {
-        padding: 40px 20px;
-        gap: 20px;
-    }
+/* Hamburger icon styling */
+/*.hamburger {
+    display: none; /* hidden on desktop 
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;
 }
+*/
 
-@media (max-width: 500px) {
-    .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+.hamburger {
+    display: none;           /* hide on desktop */
+    font-size: 28px;
+    cursor: pointer;
+}
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;      /* show hamburger */
+        margin-left: auto;   /* push to right */
+        font-size: 28px;
+        cursor: pointer;
     }
 
     .navbar ul {
+        display: none;       /* hide menu initially */
         flex-direction: column;
         gap: 10px;
-        width: 100%;
+        position: absolute;
+        top: 100%;           /* dropdown below header */
+        right: 0;            /* align to right */
+        background: rgba(255, 255, 255, 0.82); /* glass effect */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 0 0 12px 12px;
+        z-index: 99;
     }
 
-    .navbar a, .sign-btn {
-        width: 100%;
-        text-align: center;
+    .navbar ul.show {
+        display: flex;       /* show menu when toggled */
+    }
+
+    .main-header {
+        flex-direction: row;  /* logo left, hamburger right */
+        align-items: center;
+        padding: 15px 20px;
     }
 }
 
-
-
+/*===========================
+    MOBILE FIXES ENDS
+============================*/
 
 /* ===========================
    CONTACT PAGE STYLING
@@ -452,19 +475,34 @@ footer img {
 
 /* Mobile Friendly */
 @media (max-width: 700px) {
-    .contact-boxes {
-        flex-direction: column;
-        align-items: center;
+    html, body {
+        overflow-x: hidden; /* only for mobile */
     }
 
-    .contact-card {
-        width: 90%;
-        max-width: 340px;
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .navbar a, .sign-btn {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
     }
 }
-/* ===========================
+/*========================
    FAQ DROPDOWN ACCORDION
-   =========================== */
+=========================== */
 
 .faq-page {
     max-width: 900px;

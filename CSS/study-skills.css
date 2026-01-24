@@ -7,12 +7,14 @@ body {
 
 /* HEADER */
 .main-header {
-    background: white;
+    position: relative; /* changed from sticky only */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    background: white;
     border-bottom: 1px solid #ddd;
+    z-index: 100;
 }
 
 .logo { height: 60px; }
@@ -27,6 +29,14 @@ body {
     text-decoration: none;
     font-weight: 500;
     color: #333;
+    transition: color 0.2s ease;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+.navbar a:hover,
+.navbar a.active {
+    color: #007bff;
+    background-color: rgba(0, 119, 255, 0.1);
 }
 
 .sign-btn {
@@ -34,6 +44,55 @@ body {
     color: white !important;
     padding: 6px 14px;
     border-radius: 6px;
+}
+
+/* ================= HAMBURGER - HIDDEN ON DESKTOP ================= */
+.hamburger {
+    display: none;          /* Hidden on desktop by default */
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    margin-left: auto;      /* Push to right when shown */
+}
+
+
+/*============================
+   RESPONSIVE NAVIGATION
+   ===========================*/
+@media (max-width: 700px) {
+    .hamburger {
+        display: block;      /* show hamburger */
+        margin-left: auto;   /* push to right */
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .navbar ul {
+        display: none;       /* hide menu initially */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;           /* dropdown below header */
+        right: 0;            /* align to right */
+        background: rgba(255, 255, 255, 0.7); /* glass effect */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 10px 20px;
+        border-radius: 0 0 12px 12px;
+        z-index: 99;
+    }
+
+    .navbar ul.show {
+        display: flex;       /* show menu when toggled */
+    }
+
+    .main-header {
+        flex-direction: row;  /* logo left, hamburger right */
+        align-items: center;
+        padding: 15px 20px;
+    }
 }
 
 /* INTRO SECTION */

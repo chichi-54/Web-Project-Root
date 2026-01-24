@@ -15,6 +15,7 @@
     <!-- HEADER -->
     <header class="main-header">
         <img src="../images/logo.png" class="logo" alt="Career Hub Logo" />
+        <div class="hamburger">&#9776;</div>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
@@ -23,7 +24,7 @@
                 <li><a href="tutor-profiles.html">Mentors</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
                 <li><a class="sign-btn" href="sign-in.html">Sign In</a></li>
             </ul>
         </nav>
@@ -156,6 +157,23 @@
         </div>
     </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show"); // toggles menu
+        });
+
+        // Optional: close menu when clicking a link
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => navMenu.classList.remove("show"));
+        });
+    }
+});
+</script>
 </body>
 
 </html>

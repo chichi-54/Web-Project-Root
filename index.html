@@ -5,30 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Step - Home</title>
+    
     <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+<!-- ================= HEADER / NAVBAR ================= -->
 
-    <!-- ================= HEADER / NAVIGATION ================= -->
-   <header class="main-header">
+<header class="main-header">
     <img src="images/logo.png" alt="Career Hub Logo" class="logo">
+
+    <div class="hamburger">&#9776;</div> <!-- ☰ -->
+
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="pages/resources.html">Resources</a></li>
             <li><a href="pages/dashboard.html">Dashboard</a></li>
             <li><a href="pages/tutor-profiles.html">Mentors</a></li>
             <li><a href="pages/about.html">About</a></li>
-             <li><a href="pages/faq.html">FAQ</a></li>
+            <li><a href="pages/faq.html">FAQ</a></li>
             <li><a href="pages/contact.html">Contact</a></li>
-             <li><a href="pages/sign-in.html" class="sign-btn">Sign In</a></li>
+            <li><a href="pages/sign-in.html" class="sign-btn">Sign In</a></li>
         </ul>
     </nav>
-
-</header>
-               
+</header>      
 
 
     <!-- ================= HERO SECTION ================= -->
@@ -122,6 +125,26 @@
             <p>Phone: (555) 123‑4567</p>
         </div>
     </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar ul");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("show"); // toggle mobile menu
+        });
+
+        // optional: close menu when clicking a link
+        navMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("show");
+            });
+        });
+    }
+});
+</script>
+
 
 </body>
 
