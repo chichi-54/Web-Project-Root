@@ -146,52 +146,119 @@ body {
     }
 }
 
-/* ================= STATS CARD ENHANCEMENT ================= */
+/* ================= ENHANCED PROGRESS SECTION ================= */
 .stats-card {
     grid-column: span 1;
+    position: relative;
 }
 
-.stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 15px;
+/* Progress bars section */
+.progress-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.stat-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+.progress-item {
+    margin-bottom: 15px;
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
 }
 
-.stat-card i {
-    font-size: 2rem;
-    color: var(--blue-dark);
-    margin-bottom: 10px;
-}
-
-.stat-card h3 {
+.progress-header span {
     font-size: 0.9rem;
-    color: #666;
-    margin: 8px 0;
-}
-
-.stat-card p {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #333;
-    margin: 0;
 }
 
+.progress-bar-container {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--blue), var(--blue-dark));
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Quick Notes Section */
+.quick-notes {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.quick-notes h3 {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.notes-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    resize: none;
+    min-height: 80px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.notes-input:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(90, 150, 214, 0.1);
+}
+
+.notes-save {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.notes-save:hover {
+    background: var(--blue-dark);
+    transform: translateY(-2px);
+}
 /* ================= EMOTION CARD ENHANCEMENT ================= */
 .emotion-card {
     grid-column: span 1;
@@ -644,6 +711,152 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
+/* ================= MOBILE HAMBURGER MENU ================= */
+@media (max-width: 700px) {
+    /* Header layout - logo left, hamburger right */
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between; /* Logo left, hamburger right */
+        align-items: center;
+        padding: 12px 20px;
+    }
+    
+    /* Logo stays on left */
+    .logo {
+        height: 50px;
+        order: 1; /* First item (left) */
+    }
+    
+    /* Hamburger button - show on mobile */
+    .hamburger {
+        display: block;          /* Show hamburger on mobile */
+        margin-left: 0;          /* Don't push - controlled by order */
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+        padding: 5px;
+        order: 3;               /* Last item (far right) */
+        z-index: 101;           /* Above everything */
+    }
+    
+    /* Hide the regular navigation menu on mobile */
+    .navbar {
+        order: 2; /* This keeps nav in middle if needed, but it will be hidden */
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .navbar ul {
+        display: none;          /* Hide menu initially */
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 100%;              /* Dropdown below header */
+        right: 0;               /* Align to right edge */
+        left: 0;                /* Full width dropdown */
+        background: rgba(255, 255, 255, 0.95); /* Solid white with slight transparency */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 15px 0;
+        margin: 0 15px;         /* Add some margin on sides */
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        z-index: 100;           /* Below hamburger but above content */
+    }
+    
+    /* Show menu when toggled */
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    /* Menu items styling */
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar a {
+        display: block;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* Active state for mobile menu */
+    .navbar a.active {
+        background: rgba(0, 119, 255, 0.1);
+        color: #0077ff;
+        font-weight: 600;
+    }
+    
+    /* Mobile adjustments for dashboard content */
+    .dashboard-grid {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .emoji-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .emoji {
+        font-size: 2rem;
+    }
+}
+
+/* ================= SMALL MOBILE (Optional extra adjustments) ================= */
+@media (max-width: 480px) {
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .tool-btn {
+        padding: 14px;
+        min-height: 85px;
+    }
+    
+    .tool-btn i {
+        font-size: 1.5rem;
+    }
+    
+    .main-header {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        height: 45px;
+    }
+    
+    .hamburger {
+        font-size: 24px;
+    }
+    
+    .navbar ul {
+        margin: 0 10px;
+    }
+}
 @media (max-width: 1200px) {
     .dashboard-grid {
         grid-template-columns: repeat(2, 1fr);

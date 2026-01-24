@@ -303,4 +303,69 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+// Add to your existing dashboard.js file
+function initProgressSection() {
+    // Progress bar animations
+    const progressBars = document.querySelectorAll('.progress-fill');
+    progressBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0%';
+        setTimeout(() => {
+            bar.style.width = width;
+        }, 300);
+    });
+    
+    // Notes functionality
+    const notesInput = document.querySelector('.notes-input');
+    const notesSaveBtn = document.querySelector('.notes-save');
+    
+    // Load saved notes
+    const savedNotes = localStorage.getItem('dashboardNotes');
+    if (savedNotes) {
+        notesInput.value = savedNotes;
+    }
+    
+    // Save notes
+    notesSaveBtn.addEventListener('click', () => {
+        localStorage.setItem('dashboardNotes', notesInput.value);
+        showNotification('Note saved successfully!');
+        notesSaveBtn.textContent = 'Saved!';
+        setTimeout(() => {
+            notesSaveBtn.textContent = 'Save Note';
+        }, 2000);
+    });
+    
+    // Auto-save every 30 seconds
+    notesInput.addEventListener('input', () => {
+        clearTimeout(window.notesTimeout);
+        window.notesTimeout = setTimeout(() => {
+            localStorage.setItem('dashboardNotes', notesInput.value);
+        }, 30000);
+    });
+    
+    // Goal checkboxes
+    const goalCheckboxes = document.querySelectorAll('.goal-checkbox');
+    goalCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('click', function() {
+            this.classList.toggle('checked');
+            const goalText = this.nextElementSibling;
+            goalText.classList.toggle('completed');
+            
+            // Update streak count
+            const streakEl = this.closest('.goal-item').querySelector('.goal-streak');
+            if (streakEl) {
+                let streak = parseInt(streakEl.textContent) || 0;
+                streak = this.classList.contains('checked') ? streak + 1 : Math.max(0, streak - 1);
+                streakEl.textContent = streak + ' days';
+            }
+        });
+    });
+}
+
+// Call this in your DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    // Your existing code...
+    initProgressSection();
+    // Rest of your code...
+});
 });
