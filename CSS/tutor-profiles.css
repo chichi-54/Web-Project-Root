@@ -24,22 +24,23 @@ body {
     margin: 0;
     background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
     color: #333;
-/* ================= HEADER / NAV ================= */
+}
 .main-header {
-    position: sticky;               
-    top: 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 18px 40px; /* More padding for taller header */
-    background: rgba(255, 255, 255, 0.4); /* Glass effect */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
-
+/* -----------------------------
+* -----------------------------
+    NAVBAR / HEADER
+------------------------------*/
+/* ================= HEADER / NAV ================= */
 .logo {
     height: 65px;
 }
@@ -51,14 +52,13 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    margin-left: auto; /* Push nav to the right */
 }
 
 .navbar a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
     padding: 6px 12px;
     border-radius: 6px;
 }
@@ -67,6 +67,19 @@ body {
 .navbar a.active {
     color: #007bff;
     background-color: rgba(0, 119, 255, 0.1);
+}
+
+.sign-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: #fff !important;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.sign-btn:hover {
+    background-color: #005fcc;
 }
 
 /* ================= HAMBURGER - HIDDEN ON DESKTOP ================= */
@@ -78,7 +91,6 @@ body {
     cursor: pointer;
     color: #333;
     margin-left: auto;      /* Push to right when shown */
-}
 }
 
 /* Mobile view */
