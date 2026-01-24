@@ -5,17 +5,23 @@ body {
     color: #333;
 }
 
-/* ================= HEADER / NAV ================= */
+/* Header */
 .main-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    position: sticky;
+    position: sticky;               /* stays at the top */
     top: 0;
-    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+
+    background: rgba(255, 255, 255, 0.4);  /* semi-transparent for glass effect */
+    backdrop-filter: blur(10px);           /* frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);         /* gentle shadow */
+    
+    z-index: 100; /* stays above content */
 }
 
 .logo {

@@ -5,18 +5,24 @@ body {
     color: #333;
 }
 
-/* HEADER */
+/* Header */
 .main-header {
-    position: relative; /* changed from sticky only */
+    position: sticky;               /* stays at the top */
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background: white;
-    border-bottom: 1px solid #ddd;
-    z-index: 100;
-}
+    padding: 18px 40px;
 
+    background: rgba(255, 255, 255, 0.4);  /* semi-transparent for glass effect */
+    backdrop-filter: blur(10px);           /* frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);         /* gentle shadow */
+    
+    z-index: 100; /* stays above content */
+}
 .logo { height: 60px; }
 
 .navbar ul {
