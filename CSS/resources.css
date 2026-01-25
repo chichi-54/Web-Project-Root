@@ -241,16 +241,6 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.resource-card:hover:before {
-    opacity: 1;
-}
-
-.resource-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    border-color: rgba(0, 119, 204, 0.2);
-}
-
 .resource-card h2 {
     margin-top: 0;
     color: #003f88;
