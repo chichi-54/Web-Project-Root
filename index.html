@@ -17,7 +17,7 @@
 <header class="main-header">
     <img src="images/logo.png" alt="Career Hub Logo" class="logo">
 
-    <div class="hamburger">&#9776;</div> <!-- ☰ -->
+      <div class="hamburger">&#9776;</div> <!-- ☰ -->
 
     <nav class="navbar">
         <ul>
@@ -141,39 +141,37 @@
        
     </footer>
 
-    <script src="../js/study-skills.js" defer></script>
 </body>
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', function() { 
+    const hamburger = document.querySelector('.hamburger'); 
+    const navList = document.querySelector('.navbar ul'); 
+
+    if (hamburger && navList) { 
+        hamburger.addEventListener('click', function(e) { 
+            e.stopPropagation();
+            navList.classList.toggle('show'); 
+        }); 
         
-        if (hamburger) {
-            hamburger.addEventListener('click', function() {
-                navbar.classList.toggle('show');
-            });
-            
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) {
-                    navbar.classList.remove('show');
-                }
-            });
-            
-            // Close menu when clicking a link
-            const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navbar.classList.remove('show');
-                });
-            });
-        }
-    });
+        // Close when clicking outside
+        document.addEventListener('click', function(event) { 
+            if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) { 
+                navList.classList.remove('show'); 
+            } 
+        }); 
+        
+        // Close when link clicked
+        const navLinks = document.querySelectorAll('.navbar a'); 
+        navLinks.forEach(link => { 
+            link.addEventListener('click', () => { 
+                navList.classList.remove('show'); 
+            }); 
+        }); 
+    } 
+});
 </script>
-
-
-
+<script src="js/main.js" defer></script>
 </body>
 
 

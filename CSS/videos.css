@@ -181,7 +181,8 @@ footer img {
 }
 
 .footer-links a:hover {
-    color: #0056b3;
+    color: #FF6B00; /* Orange hover */
+    transition: color 0.2s ease;
 }
 
 .footer-contact p {

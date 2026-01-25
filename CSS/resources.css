@@ -515,7 +515,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #FF6B00; /* Orange hover */
     padding-left: 5px;
 }
 

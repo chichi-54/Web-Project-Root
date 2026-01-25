@@ -1,158 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Career Readiness Hub</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="icon" href="../images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-
     <!-- HEADER -->
     <header class="main-header">
         <img src="../images/logo.png" class="logo" alt="Career Hub Logo" />
-        <div class="hamburger">&#9776;</div>
+        <button class="hamburger">&#9776;</button>
         <nav class="navbar">
             <ul>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="tutor-profiles.html">Mentors</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a class="sign-btn" href="sign-in.html">Sign In</a></li>
+                <li><a href="../pages/resources.html">Resources</a></li>
+                <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                <li><a href="../pages/tutor-profiles.html">Mentors</a></li>
+                <li><a href="../pages/about.html">About</a></li>
+                <li><a href="../pages/faq.html">FAQ</a></li>
+                <li><a href="../pages/contact.html" class="active">Contact</a></li>
+                <li><a class="sign-btn" href="../pages/sign-in.html">Sign In</a></li>
             </ul>
         </nav>
     </header>
-    <!-- ================= CONTACT INTRO ================= -->
+
+    <!-- CONTACT INTRO -->
     <section class="contact-intro">
         <h1>Contact Us</h1>
-
-        <p>
-            We support students, parents, educators, and community partners in their college and career readiness journeys.
-            If you need guidance about academic planning, internships, resumes, AP courses, or general career exploration,
-            our team is here to assist you.
-        </p>
-
-        <p>
-            If you are unsure where to start, use the form below and tell us more about your background.
-            Understanding whether you are a high school student, parent, teacher, or counselor helps us match you
-            with the right resources and support. We typically respond within <strong>1–2 business days</strong>.
-        </p>
+        <p>We support students, parents, educators, and community partners in their college and career readiness journeys. If you need guidance about academic planning, internships, resumes, AP courses, or general career exploration, our team is here to assist you.</p>
+        <p>If you are unsure where to start, use the form below and tell us more about your background. Understanding whether you are a high school student, parent, teacher, or counselor helps us match you with the right resources and support. We typically respond within <strong>1-2 business days</strong>.</p>
     </section>
 
-    <!-- ================= CONTACT INFO BOXES ================= -->
+    <!-- CONTACT INFO BOXES -->
     <section class="contact-boxes">
-
         <div class="contact-card">
-            <h3>📞 Phone</h3>
-            <p>(555) 123‑4567</p>
-            <p>Mon–Fri, 8 AM – 4 PM CST</p>
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <h3>Phone</h3>
+            <p>(555) 123-4567</p>
+            <p>Mon-Fri, 8 AM - 4 PM CST</p>
         </div>
-
+        
         <div class="contact-card">
-            <h3>📧 Email</h3>
-            <p>support@careerhub.com</p>
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>support@nextstep.com</p>
             <p>Available 24/7</p>
         </div>
-
+        
         <div class="contact-card">
-            <h3>🏫 School Support Office</h3>
+            <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3>School Support Office</h3>
             <p>123 Career Lane</p>
             <p>Guidance Department</p>
-            <p>Walk‑ins welcome during school hours</p>
+            <p>Walk-ins welcome during school hours</p>
         </div>
-
     </section>
 
-    <!-- ================= CONTACT FORM ================= -->
+    <!-- CONTACT FORM -->
     <section class="contact-form-section">
         <h2>Send Us a Message</h2>
-
         <form id="contactForm">
-
-            <!-- FIRST NAME -->
-            <label for="firstName">First Name:</label><br>
-            <input type="text" id="firstName" name="firstName" required><br>
-
-            <!-- LAST NAME -->
-            <label for="lastName">Last Name:</label><br>
-            <input type="text" id="lastName" name="lastName" required><br>
-
-            <!-- EMAIL -->
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-
-            <!-- USER TYPE -->
-            <label for="usertype">Who are you?</label><br>
-            <select id="usertype" name="usertype" required>
-                <option value="" disabled selected>Select one...</option>
-                <option value="highschool">High School Student</option>
-                <option value="college">College Student</option>
-                <option value="parent">Parent / Guardian</option>
-                <option value="educator">Teacher / Counselor</option>
-                <option value="other">Not Currently Enrolled</option>
-            </select><br>
-
-            <!-- GRADE LEVEL -->
-            <label for="grade">Grade Level (if applicable):</label><br>
-            <select id="grade" name="grade">
-                <option value="" disabled selected>Select grade...</option>
-                <option value="9">9th Grade</option>
-                <option value="10">10th Grade</option>
-                <option value="11">11th Grade</option>
-                <option value="12">12th Grade</option>
-                <option value="grad">Graduated</option>
-            </select><br>
-
-            <!-- REASON FOR CONTACT -->
-            <label for="reason">Reason for contacting:</label><br>
-            <select id="reason" name="reason" required>
-                <option value="" disabled selected>Select one...</option>
-                <option value="resume">Resume / Job Application Help</option>
-                <option value="college">College Readiness Questions</option>
-                <option value="internships">Internships / Volunteer Opportunities</option>
-                <option value="classes">AP / Course Planning Support</option>
-                <option value="tech">Technical Issue / Dashboard Help</option>
-                <option value="resources">Request More Resources</option>
-                <option value="feedback">Feedback / Suggestions</option>
-            </select><br>
-
-            <!-- MESSAGE -->
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" placeholder="Type your message here..." required></textarea><br>
-
-            <!-- SUBMIT BUTTON -->
-            <button type="submit">Submit Message</button>
-
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" class="form-control" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="usertype">Who are you?</label>
+                    <select id="usertype" name="usertype" class="form-control" required>
+                        <option value="" disabled selected>Select one...</option>
+                        <option value="highschool">High School Student</option>
+                        <option value="college">College Student</option>
+                        <option value="parent">Parent / Guardian</option>
+                        <option value="educator">Teacher / Counselor</option>
+                        <option value="other">Not Currently Enrolled</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade Level (if applicable)</label>
+                    <select id="grade" name="grade" class="form-control">
+                        <option value="" disabled selected>Select grade...</option>
+                        <option value="9">9th Grade</option>
+                        <option value="10">10th Grade</option>
+                        <option value="11">11th Grade</option>
+                        <option value="12">12th Grade</option>
+                        <option value="grad">Graduated</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="reason">Reason for contacting</label>
+                <select id="reason" name="reason" class="form-control" required>
+                    <option value="" disabled selected>Select one...</option>
+                    <option value="resume">Resume / Job Application Help</option>
+                    <option value="college">College Readiness Questions</option>
+                    <option value="internships">Internships / Volunteer Opportunities</option>
+                    <option value="classes">AP / Course Planning Support</option>
+                    <option value="tech">Technical Issue / Dashboard Help</option>
+                    <option value="resources">Request More Resources</option>
+                    <option value="feedback">Feedback / Suggestions</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control textarea" placeholder="Type your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Message</button>
             <p class="response-note">
-                Thank you! You can expect to hear from us within <strong>1–2 business days</strong>.
+                Thank you! You can expect to hear from us within <strong>1-2 business days</strong>.
             </p>
-
         </form>
     </section>
 
-   <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-left">
-                <img src="../images/logo.png" alt="Next Step Logo">
-                <p>Next Step Learning Hub © 2026</p>
+                <img src="../images/logo.png" alt="Career Hub Logo">
+                <p>Career Readiness Hub © 2026</p>
                 <p class="footer-tagline">Empowering students through evidence-based learning strategies</p>
             </div>
             <div class="footer-middle">
                 <h4>Quick Links</h4>
                 <div class="footer-links">
-                    <a href="../pages/contact.html">Contact Us</a>
-                    <a href="../pages/about.html">About</a>
-                    <a href="../pages/faq.html">FAQ</a>
-                    <a href="../pages/sign-in.html">Sign In</a>
-                    <a href="../pages/tutor-profiles.html">Find a Mentor</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="about.html">About</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="sign-in.html">Sign In</a>
+                    <a href="tutor-profiles.html">Find a Mentor</a>
                 </div>
             </div>
             <div class="footer-right">
@@ -170,37 +170,40 @@
                 </div>
             </div>
         </div>
-       
+        <div class="footer-bottom">
+            <p>&copy; 2026 Career Readiness Hub. All rights reserved.</p>
+        </div>
     </footer>
 
-<script>
-    // Mobile menu toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
-        
-        if (hamburger) {
-            hamburger.addEventListener('click', function() {
-                navbar.classList.toggle('show');
-            });
+    <script src="../js/contact.js" defer></script>
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navbar = document.querySelector('.navbar ul');
             
-            // Close menu when clicking outside
-            document.addEventListener('click', function(event) {
-                if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) {
-                    navbar.classList.remove('show');
-                }
-            });
-            
-            // Close menu when clicking a link
-            const navLinks = document.querySelectorAll('.navbar a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    navbar.classList.remove('show');
+            if (hamburger && navbar) {
+                hamburger.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navbar.classList.toggle('show');
                 });
-            });
-        }
-    });
-</script>
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) {
+                        navbar.classList.remove('show');
+                    }
+                });
+                
+                // Close menu when clicking a link
+                const navLinks = document.querySelectorAll('.navbar a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navbar.classList.remove('show');
+                    });
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>

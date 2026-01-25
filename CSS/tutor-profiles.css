@@ -83,6 +83,9 @@ body {
 .sign-btn:hover {
     background-color: #005fcc;
     padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff !important;
+    font-weight: 500;
 }
 
 /* ================= HAMBURGER - HIDDEN ON DESKTOP ================= */
@@ -332,7 +335,8 @@ footer img {
 }
 
 .footer-links a:hover {
-    color: #0056b3;
+    color: #FF6B00; /* Orange hover */
+    transition: color 0.2s ease;
 }
 
 .footer-contact p {
