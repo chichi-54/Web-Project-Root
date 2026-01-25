@@ -17,6 +17,7 @@ body {
 .main-header {
     position: sticky;               /* stays at the top */
     top: 0;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +43,7 @@ body {
     align-items: center;
     margin-left: auto;
     padding: 0;
+    z-index: 2000;
 }
 
 .navbar a {
