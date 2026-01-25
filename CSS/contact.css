@@ -1,23 +1,16 @@
-/* Reset & Global */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ===== PAGE STYLES ===== */
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f8fbfe 0%, #fff9f5 100%);
+    margin: 0;
+    background: linear-gradient(135deg, #d9ecff 0%, #ffe8d6 100%);
     color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
 }
 
 /* Header */
 .main-header {
     position: sticky;               /* stays at the top */
     top: 0;
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,50 +25,38 @@ body {
     
     z-index: 100; /* stays above content */
 }
-.logo {
-    height: 50px;
-}
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    margin-left: auto;
-    padding: 0;
-    z-index: 2000;
-}
-
+/* Ensure nav links are readable on glass */
 .navbar a {
-    color: #333;
+ color: #333;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    transition: 0.2s;
+    padding: 6px 12px;
+    border-radius: 6px;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    background: rgba(0, 119, 255, 0.1);
     color: #0077ff;
+    background-color: rgba(0, 119, 255, 0.1);
+
+}
+.logo {
+    height: 60px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
 .sign-btn {
-   background: linear-gradient(135deg, #00b4ff, #007bff);
-    color: white !important;
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.2); /* Changed to orange */
-}
-
-.sign-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.3); /* Changed to orange */
-    background: linear-gradient(135deg, #E55A00, #FF6B00);
+    background: #0077ff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #fff !important;
 }
 
 .hamburger {
