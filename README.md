@@ -1,95 +1,119 @@
-# Career Readiness Learning Hub  
-**FBLA Website Design Competition Project**
+# 🚀 Next Step — Career Learning Hub  
+### FBLA Website Design Competition Project
 
-## Overview  
-The **Career Readiness Learning Hub** is a multi‑page educational website created for the FBLA Website Design Competition. Its purpose is to guide students and parents through essential college‑ and career‑readiness resources, including mentorship, resumes, internships, interview preparation, and professional communication.
+![HTML5](https://img.shields.io/badge/HTML5-Structure-orange?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-Interactivity-yellow?logo=javascript&logoColor=black)
+![Status](https://img.shields.io/badge/Project-FBLA%20Competition-success)
 
-The website is fully responsive and built using **HTML, CSS, and JavaScript**, with clean layout structures and interactive components designed for **accessibility and ease of navigation**.
+🔗 **Live Site:** https://chichi-54.github.io/Web-Project-Root/index.html
 
 ---
 
-## Features  
-### 1. Home Page  
-Introduces the mission, highlights key tools, and provides quick navigation to major sections of the site.
+## 📘 Overview  
 
-### 2. Resources Page  
-Provides categorized information for:  
+**Next Step** is a career readiness learning hub designed to help students explore career pathways, develop professional skills, and prepare for life after high school. Built for the **FBLA Website Design Competition**, the platform provides structured, easy-to-navigate resources that make career planning less overwhelming.
+
+The website supports both **students and parents** by offering tools for mentorship, resumes, internships, interview preparation, and professional communication — all within a clean, responsive interface.
+
+---
+
+## ❓ Problem It Solves  
+
+Many students feel uncertain about:
+- What career paths exist  
+- How to prepare for college or the workforce  
+- How to build resumes or professional skills  
+- Where to find mentorship and guidance  
+
+**Next Step** simplifies this process by organizing essential information into clear, guided sections so students can take actionable steps toward their future.
+
+---
+
+##  Features  
+
+###  Home Page  
+- Introduces the mission  
+- Highlights key tools  
+- Quick navigation to core sections  
+
+###  Resources Page  
+Organized learning materials for:
 - Career pathways  
 - College preparation  
 - Soft skills  
-- Resume and interview guidance  
+- Resume & interview guidance  
 
-### 3. Student Dashboard  
-A centralized panel where students can access recommended content, progress sections, and personal tools.
+###  Student Dashboard  
+- Centralized student access point  
+- Recommended content  
+- Progress-focused structure  
 
-### 4. Mentor Profiles  
-Displays professional mentors, including:  
+###  Mentor Profiles  
+Displays professionals with:
 - Profile images  
 - Skills and specialties  
-- Industries  
-- Quick‑view cards  
+- Industry focus  
+- Quick-view information cards  
 
-### 5. Q&A Forum  
-Interactive filtering and user‑submitted questions, built with JavaScript.  
-Includes:  
-- Category filters  
-- Live question submission  
-- Dynamic card generation  
+###  Q&A Forum (JavaScript-Powered)  
+Interactive forum with:
+- Category filtering  
+- User-submitted questions  
+- Dynamic content display  
 
-### 6. FAQ and About Pages  
-Clear information about the organization, mission, and commonly asked student/parent questions.
+###  FAQ & About Pages  
+- Mission explanation  
+- Organization details  
+- Answers to common questions  
 
-### 7. Contact Page  
-Includes professional contact information and a structured layout for support inquiries.
-
----
-
-## Tech Stack  
-| Technology          | Purpose                                                                 |
-|---------------------|-------------------------------------------------------------------------|
-| HTML5               | Page structure and semantic layout                                     |
-| CSS3                | Styling, responsive design, visual components                          |
-| JavaScript (Vanilla)| Interactive features, filtering, form handling                         |
-| Font & Icon Assets  | Enhances visual presentation and readability                           |
-| Local Images/Video  | Used for mentor profiles, branding elements, and learning materials    |
+###  Contact Page  
+- Structured layout  
+- Professional contact information  
 
 ---
 
-## Project Goals  
-This project was developed to meet **FBLA Website Design guidelines** by providing:  
-- Professional branding and consistent page design  
-- Interactive learning tools  
-- Student‑focused content organization  
-- Functional forms and user interactions  
-- Modern and responsive layout across devices  
+##  Tech Stack  
 
-The website is intended as a **supportive resource** for students preparing for real‑world academic and professional pathways.
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Semantic structure and page layout |
+| **CSS3** | Styling, responsiveness, visual design |
+| **JavaScript (Vanilla)** | Interactivity, filtering, dynamic content |
+| **Images & Media Assets** | Visual learning and branding elements |
 
 ---
 
-## Collaborators  
-This project was created by:  
+##  Project Goals  
+
+This project aligns with **FBLA Website Design guidelines** and focuses on:
+
+- Professional branding  
+- User-friendly navigation  
+- Interactive educational tools  
+- Student-centered content  
+- Functional and responsive design  
+- Real-world career readiness support  
+
+The goal is to create a platform that helps students feel **informed, confident, and prepared** for future academic and professional opportunities.
+
+---
+
+##  Collaborators  
+
+Developed by:
+
 - **Chetachi Ikedinachi**  
 - **Mishabo Maduga**  
-- **Nancy Clark**  
+- **Nancy Clark**
 
 All contributors participated in design, development, and content structuring.
 
 ---
 
-## Installation and Setup  
-To run the project locally:  
+##  Installation & Setup  
 
-1. **Download or clone the repository:**  
-   ```bash
-   git clone https://github.com/your-repo-link-here
-2. **Open the main directory.**
-3. **Launch Site by opening**
-  ```bash
- index.html
- ```
--
+To run locally:
 
- 
-
-
+```bash
+git clone https://github.com/chichi-54/Web-Project-Root.git
