@@ -9,7 +9,7 @@
     --blue-dark: #5a96d6;
     --blue-soft: #d9ecff;
 
-    --card-bg: rgba(255, 255, 255, 0.72);
+    /*--card-bg: rgba(255, 255, 255, 0.72);*/
     --card-border: rgba(255, 255, 255, 0.3);
 
     --radius: 18px;
@@ -25,7 +25,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(90deg, #ffe8d6, #d9ecff);
+    background-color: #f0f4f8;
+    /* background: linear-gradient(90deg, #ffe8d6, #d9ecff); */
     color: #333;
 }
 
@@ -119,9 +120,10 @@ body {
 .card {
     background: var(--card-bg);
     backdrop-filter: blur(12px);
+    align-items: center;
     border-radius: var(--radius);
     padding: 28px;
-    box-shadow: var(--shadow-1);
+    /* box-shadow: var(--shadow-1); */
     border: 1px solid var(--card-border);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     display: flex;
@@ -262,22 +264,24 @@ body {
 
 .emoji-slider {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
     width: 100%;
-    margin: 20px 0;
+    margin: 15px 0;
+
 }
 
 .emoji-container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 .emoji {
-    font-size: 2.5rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 10px;
@@ -291,7 +295,7 @@ body {
 }
 
 .emoji.active {
-    transform: scale(1.5);
+    transform: scale(0.5);
     background: var(--orange-soft);
     box-shadow: 0 0 15px rgba(255, 183, 124, 0.5);
 }
@@ -304,7 +308,7 @@ body {
     background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcf7f, #4d96ff, #9d4edd);
     border-radius: 4px;
     outline: none;
-    margin: 20px 0;
+    margin: 30px 10px 0;
 }
 
 .slider::-webkit-slider-thumb {
@@ -321,13 +325,32 @@ body {
 
 /* ================= IMPROVED TOOL BUTTONS ================= */
 .tool-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
     gap: 16px; /* Increased from 12px */
-    width: 100%;
+    /* width: 100%; */
     margin: 25px 0; /* Increased from 20px */
 }
 
+.emoji-tool-btn {
+    background: linear-gradient(135deg, var(--orange), #ff9a3c);
+    display: flex;
+    color: white;
+    padding: 18px 16px; /* Increased padding */
+    border-radius: 14px; /* Slightly more rounded */
+    font-weight: 600;
+    width: 400px;
+    margin: 0;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    justify-content: center;
+    gap: 22px; /* Increased gap */
+    border: none;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(255, 123, 0, 0.25); /* Softer shadow */
+    min-height: 60px; /* Give buttons consistent height */
+}
 .tool-btn {
     background: linear-gradient(135deg, var(--orange), #ff9a3c);
     color: white;
@@ -745,23 +768,25 @@ footer {
     }
     
     .navbar ul {
-        display: none;          /* Hide menu initially */
+        display: none;
         flex-direction: column;
-        gap: 0;
         position: absolute;
-        top: 100%;              /* Dropdown below header */
-        right: 0;               /* Align to right edge */
-        left: 0;                /* Full width dropdown */
-        background: rgba(255, 255, 255, 0.95); /* Solid white with slight transparency */
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        padding: 15px 15px; /* padding instead of margin */
+        margin: 0;
+
+        background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        padding: 15px 0;
-        margin: 0 15px;         /* Add some margin on sides */
+
         border-radius: 0 0 12px 12px;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        z-index: 100;           /* Below hamburger but above content */
+        z-index: 100;
     }
-    
+
     /* Show menu when toggled */
     .navbar ul.show {
         display: flex;
@@ -820,6 +845,95 @@ footer {
 
 /* ================= SMALL MOBILE (Optional extra adjustments) ================= */
 @media (max-width: 480px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+    }
+    
+    /* Logo stays on left */
+    .logo {
+        height: 50px;
+        order: 1; /* First item (left) */
+    }
+    
+    /* Hamburger button - show on mobile */
+    .hamburger {
+        display: block;          /* Show hamburger on mobile */
+        margin-left: 0;          /* Don't push - controlled by order */
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+        padding: 5px;
+        order: 3;               /* Last item (far right) */
+        z-index: 101;           /* Above everything */
+    }
+    
+    /* Hide the regular navigation menu on mobile */
+    .navbar {
+        order: 2; /* This keeps nav in middle if needed, but it will be hidden */
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        padding: 15px 15px; /* padding instead of margin */
+        margin: 0;
+
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+    }
+
+    /* Show menu when toggled */
+    .navbar ul.show {
+        display: flex;
+    }
+    
+    /* Menu items styling */
+    .navbar li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .navbar a {
+        display: block;
+        padding: 14px 20px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .navbar li:last-child a {
+        border-bottom: none;
+    }
+    
+    /* Active state for mobile menu */
+    .navbar a.active {
+        background: rgba(0, 119, 255, 0.1);
+        color: #0077ff;
+        font-weight: 600;
+    }
+    .emoji-tool-btn {
+        width: 100%;
+        max-width: 400px;
+    }
+
     .stats-row {
         grid-template-columns: 1fr;
     }
@@ -864,16 +978,18 @@ footer {
 @media (max-width: 768px) {
     .dashboard-grid {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 10px;
         gap: 20px;
     }
     
     .stats-row {
         grid-template-columns: repeat(2, 1fr);
+
     }
     
     .tool-buttons {
         grid-template-columns: 1fr;
+
     }
     
     .activity-item {
@@ -901,19 +1017,49 @@ footer {
 @media (max-width: 480px) {
     .stats-row {
         grid-template-columns: 1fr;
+        max-width: 200px;
     }
     
     .stat-card {
+        max-width: 200px;
         padding: 15px;
     }
     
-    .emoji-container {
-        flex-wrap: wrap;
+    .emoji-slider {
+        display: flex;
+        /* flex-direction: column; */
         justify-content: center;
-        gap: 10px;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        margin: 15px 0;
+
+    }
+
+    .emoji-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 0 10px; */
     }
     
+
+    .emoji.active {
+        transform: scale(1.5);
+        background: var(--orange-soft);
+        box-shadow: 0 0 15px rgba(255, 183, 124, 0.1);
+    }
     .emoji {
         font-size: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        padding: .5px;
+        margin:0 10px;
+        border-radius: 50%;
+    }
+
+    .emoji:hover {
+        transform: scale(1.4);
+        background: rgba(255, 183, 124, 1);
     }
 }

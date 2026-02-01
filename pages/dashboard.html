@@ -12,21 +12,22 @@
 
 <body>
     <!-- HEADER -->
-    <header class="main-header">
-        <button class="hamburger">&#9776;</button>
-        <img src="../images/logo.png" class="logo" alt="Career Hub Logo" />
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="dashboard.html" class="active">Dashboard</a></li>
-                <li><a href="tutor-profiles.html">Mentors</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="main-header">
+    <img src="../images/logo.png" alt="Career Hub Logo" class="logo">
+    <div class="hamburger">&#9776;</div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/resources.html" class="active">Resources</a></li>
+            <li><a href="../pages/dashboard.html">Dashboard</a></li>
+            <li><a href="../pages/tutor-profiles.html">Mentors</a></li>
+            <li><a href="../pages/about.html">About</a></li>
+            <li><a href="../pages/faq.html">FAQ</a></li>
+            <li><a href="../pages/contact.html">Contact</a></li>
+            <li><a href="../pages/sign-in.html" class="sign-btn">Sign In</a></li>
+        </ul>
+    </nav>
+</header>
 <!-- ================= PAGE WRAPPER ================= -->
 <div class="dashboard-wrapper">
     <div class="dashboard-grid">
@@ -103,20 +104,17 @@
         <span class="emoji" data-value="2">😐</span>
         <span class="emoji" data-value="3">😊</span>
         <span class="emoji" data-value="4">😄</span>
-        <span class="emoji" data-value="5">🌟</span>
-
-        <input type="range" min="1" max="5" value="3" class="slider" id="moodSlider">
-    
+        <span class="emoji" data-value="5">🌟</span>    
     </div>
+    <input type="range" min="1" max="5" value="3" class="slider" id="moodSlider">
+
+    <p class="emotion-label">Feeling good! Keep up the momentum!</p>
     <div class="tool-buttons">
-         <button class="tool-btn" onclick="window.location.href='stress.html'">
+         <button class="emoji-tool-btn" onclick="window.location.href='stress.html'">
                  <i class="fas fa-briefcase"></i>
                 <span>Stress Relief</span>
                 </button>
-
     </div>
-    <p class="emotion-label">Feeling good! Keep up the momentum!</p>
-
     <!-- Mood History Section -->
     <div class="mood-history">
         <h3>Recent Moods</h3>
