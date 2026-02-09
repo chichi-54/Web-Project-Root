@@ -93,15 +93,6 @@ https://git-scm.com
 
 ## Educational Guidance & Assistance
 
-**OpenAI – ChatGPT**  
-Used as a helpful learning tool for:
-- Building and organizing HTML pages  
-- Styling websites with CSS  
-- Publishing projects using GitHub Pages  
-- Learning how to make websites work well on different screen sizes  
-
-https://openai.com  
-
 **Google – NotebookLM**  
 An AI-powered note-taking and research tool used to help keep project notes organized and support the creation of educational videos about career readiness and study skills.  
 
