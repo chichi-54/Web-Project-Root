@@ -70,7 +70,7 @@ https://fonts.google.com/specimen/Poppins
 
 **FBLA (Future Business Leaders of America).**  
 Website Design Competitive Event Guidelines.  
-https://www.fbla.org  
+https://www.fbla.org/competitive-events/website-design/ 
 
 Used for:
 - Dashboard design requirements  
