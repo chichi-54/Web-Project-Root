@@ -7,6 +7,7 @@
 ![Status](https://img.shields.io/badge/Project-FBLA%20Competition-success)
 
 🔗 **Live Site:** https://chichi-54.github.io/Web-Project-Root/index.html
+🏆 **Placed 3rd Place @ Districts _(Out of 9)_**
 
 ---
 
