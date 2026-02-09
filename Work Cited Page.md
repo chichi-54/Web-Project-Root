@@ -4,17 +4,12 @@
 
 ## Web Development Languages & Standards
 
-**Mozilla Developer Network (MDN).**  
-HTML: HyperText Markup Language.  
+**HTML Documentation**  
 https://developer.mozilla.org/en-US/docs/Web/HTML  
 
-**Mozilla Developer Network (MDN).**  
+**CSS Documentation**  
 CSS: Cascading Style Sheets.  
 https://developer.mozilla.org/en-US/docs/Web/CSS  
-
-**Mozilla Developer Network (MDN).**  
-Relative Paths and File Structure.  
-https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files  
 
 ---
 
@@ -30,31 +25,10 @@ https://docs.github.com/en/pages/getting-started-with-github-pages
 
 ---
 
-## File Paths & Navigation Concepts
-
-**W3Schools.**  
-HTML File Paths.  
-https://www.w3schools.com/html/html_filepaths.asp  
-
-**W3Schools.**  
-HTML Links (`<a>` Tag).  
-https://www.w3schools.com/html/html_links.asp  
-
----
-
 ## CSS Layout & Design Techniques
 
-**W3Schools.**  
-CSS Flexbox Layout Module.  
-https://www.w3schools.com/css/css3_flexbox.asp  
-
-**W3Schools.**  
-CSS Grid Layout.  
+**CSS Grid Layout**
 https://www.w3schools.com/css/css_grid.asp  
-
-**W3Schools.**  
-CSS Media Queries (Responsive Design).  
-https://www.w3schools.com/css/css_rwd_mediaqueries.asp  
 
 ---
 
@@ -66,16 +40,9 @@ https://fonts.google.com/specimen/Poppins
 
 ---
 
-## Project-Specific Concepts
-
 **FBLA (Future Business Leaders of America).**  
 Website Design Competitive Event Guidelines.  
 https://www.fbla.org/competitive-events/website-design/ 
-
-Used for:
-- Dashboard design requirements  
-- Activity scheduling features  
-- Live tutoring and study session layout expectations  
 
 ---
 
@@ -97,12 +64,6 @@ https://git-scm.com
 An AI-powered note-taking and research tool used to help keep project notes organized and support the creation of educational videos about career readiness and study skills.  
 
 https://notebooklm.google.com  
-
-Used for:
-- Organizing and keeping track of research notes  
-- Summarizing class and learning materials  
-- Helping plan and create informational and instructional videos  
 ---
-
 
 © 2026 — Next Step Project
